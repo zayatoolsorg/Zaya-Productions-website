@@ -1,0 +1,18 @@
+/* Zaya Productions — motion. Slow, eased, never bouncy. */
+:root{
+--ease-out:cubic-bezier(0.22,1,0.36,1); /* @kind other */
+--ease-in-out:cubic-bezier(0.65,0,0.35,1); /* @kind other */
+--ease-linear:linear; /* @kind other */
+--dur-fast:180ms; /* @kind other */
+--dur-base:360ms; /* @kind other */
+--dur-slow:720ms; /* @kind other */
+--dur-cinematic:1400ms; /* @kind other */
+--reveal-distance:24px; /* @kind spacing */
+}
+@media (prefers-reduced-motion:reduce){:root{
+--dur-fast:0ms; /* @kind other */
+--dur-base:0ms; /* @kind other */
+--dur-slow:0ms; /* @kind other */
+--dur-cinematic:0ms; /* @kind other */
+--reveal-distance:0px; /* @kind spacing */
+}}

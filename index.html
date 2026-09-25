@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Zaya Productions · A creative house</title>
+  <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/base.css">
+  <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/styles.css">
+  <script src="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/_ds_bundle.js"></script>
+  <style>
+    :root{--grain-url:url("_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/assets/grain.png");}
+    html,body{margin:0;background:#F6F4F1;color:#0E0D0C;}
+    a{color:#0E0D0C;text-decoration:none;}
+    a:hover{color:#A83366;}
+    ::selection{background:#A83366;color:#F6F4F1;}
+    header > a > span{gap:15px !important;}
+    header > a > span{transform:translateY(4px);}
+    header > nav{transform:translateY(3px);}
+    header > a > span > img:first-child{height:31px !important;transform:translateY(-3px);}
+    header > a > span > img:last-child{height:32px !important;}
+    br[data-m="mbr"]{display:none;}
+    @media (max-width:819px){
+      [data-m="reelsec"]{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(70% 55% at 28% 88%,rgba(168,51,102,.28),transparent 72%),var(--zaya-night) !important;padding:48px 36px !important;}
+      [data-m="reelsec"]::before{content:"";position:absolute;inset:0;background-image:var(--grain-url);opacity:.06;mix-blend-mode:screen;pointer-events:none;z-index:-1;}
+      br[data-m="mbr"]{display:inline;}
+      [data-m="dnav"]{display:none !important;}
+      [data-m="mnav"]{display:flex !important;}
+      [data-m="hero"]{padding-top:var(--space-9) !important;min-height:0 !important;}
+      [data-m="h1"]{font-size:clamp(48px,14vw,64px) !important;line-height:1 !important;}
+      [data-m="reel"]{aspect-ratio:16 / 9 !important;min-height:0 !important;}
+      [data-m="reelbar"] span[style*="48px"]{font-size:30px !important;}
+      [data-m="reelbar"] button{width:44px !important;height:44px !important;}
+      [data-m="reelbar"]{left:16px !important;right:16px !important;bottom:14px !important;}
+      [data-m="reeltime"]{display:none !important;}
+      [data-m="hwork"]{grid-template-columns:minmax(0,1fr) !important;column-gap:0 !important;row-gap:var(--space-7) !important;}
+      [data-m="dist"]{grid-template-columns:40px minmax(0,1fr) !important;row-gap:12px !important;}
+      [data-m="dist"] > :nth-child(3){grid-column:2 !important;}
+      [data-m="hsub"]{font-size:17px !important;line-height:1.45 !important;text-align:right !important;max-width:none !important;white-space:nowrap !important;}
+      [data-m="wsub"]{margin-top:var(--space-6) !important;font-size:17px !important;line-height:1.45 !important;text-align:right !important;margin-left:auto !important;max-width:none !important;white-space:nowrap !important;}
+      [data-m="whero"]{padding-top:var(--space-7) !important;padding-bottom:var(--space-6) !important;}
+      [data-m="chero"]{padding-top:var(--space-7) !important;}
+      [data-m="chero"] > div:first-child{margin-bottom:var(--space-5) !important;}
+      [data-m="chero"] h1 + div{margin-top:var(--space-7) !important;}
+      [data-m="cshero"]{padding-top:var(--space-7) !important;padding-bottom:var(--space-7) !important;}
+      [data-m="cssub"]{font-size:17px !important;line-height:1.45 !important;}
+      main[data-screen-label="03 Case study"] h1{font-size:clamp(48px,14vw,64px) !important;line-height:1 !important;}
+      [data-m="cshero"] > div:first-child{margin-bottom:var(--space-7) !important;}
+      main[data-screen-label="02 Work"] h1{font-size:clamp(48px,14vw,64px) !important;line-height:1 !important;}
+      [data-m="mhide"]{display:none !important;}
+      [data-m="csbrief"]{font-size:21px !important;line-height:1.3 !important;}
+      [data-m="csidea"]{font-size:30px !important;line-height:1.1 !important;}
+      [data-m="csbody"]{font-size:15px !important;line-height:1.55 !important;}
+      [data-m="csh3"]{font-size:26px !important;line-height:1.1 !important;}
+      [data-m="csname"]{font-size:24px !important;}
+      [data-m="csline"]{font-size:15px !important;line-height:1.5 !important;}
+      [data-m="csquote"]{font-size:30px !important;line-height:1.1 !important;}
+      main[data-screen-label="03 Case study"] > section{padding-top:var(--space-8) !important;}
+      main[data-screen-label="03 Case study"] > section:last-child{padding-bottom:var(--space-8) !important;}
+      main[data-screen-label="03 Case study"] [data-m="csbrief"],main[data-screen-label="03 Case study"] [data-m="csidea"],main[data-screen-label="03 Case study"] [data-m="csbody"]{margin-top:var(--space-6) !important;}
+      main[data-screen-label="03 Case study"] section > div[style*="flex-direction: column"][style*="gap"]{gap:var(--space-8) !important;margin-top:var(--space-6) !important;}
+      main[data-screen-label="03 Case study"] [data-m="igrow2"], main[data-screen-label="03 Case study"] section > div > div{row-gap:var(--space-6) !important;}
+      main[data-screen-label="03 Case study"] > section{padding-top:40px !important;}
+      main[data-screen-label="03 Case study"] > section:last-child{padding-bottom:48px !important;}
+      main[data-screen-label="03 Case study"] [data-m="cshero"]{padding-top:56px !important;padding-bottom:32px !important;}
+      main[data-screen-label="03 Case study"] [data-m="cshero"] > div:first-child{margin-bottom:32px !important;}
+      main[data-screen-label="03 Case study"] [data-m="cshero"] > div:last-child{margin-top:24px !important;}
+      main[data-screen-label="03 Case study"] section > *{margin-top:0;}
+      main[data-screen-label="03 Case study"] section > div:not(:first-child){margin-top:24px !important;}
+      main[data-screen-label="03 Case study"] section > div[style*="flex-direction: column"]{gap:40px !important;}
+      main[data-screen-label="03 Case study"] [data-m="igrow2"], main[data-screen-label="03 Case study"] section > div > div{gap:20px !important;}
+      main[data-screen-label="03 Case study"] figure[style*="max-width: 460px"]{max-width:250px !important;margin:0 auto !important;}
+      main[data-screen-label="03 Case study"] section > div > div[style*="padding: 28px 0"]{padding:18px 0 !important;}
+      main[data-screen-label="03 Case study"] section > div > div[style*="display: flex"] > *{flex:none !important;}
+      main[data-screen-label="03 Case study"] section > div[style*="gap: var(--section-y)"]{gap:40px !important;}
+      main[data-screen-label="03 Case study"] section > div[style*="gap: var(--section-y)"]{margin-top:30px !important;}
+      main[data-screen-label="03 Case study"] section > div > div > div[style*="flex-direction: column"]{gap:14px !important;}
+      main[data-screen-label="03 Case study"] section > div > div[data-m="csrow"]{display:grid !important;grid-template-columns:36px minmax(0,1fr) !important;column-gap:12px !important;row-gap:10px !important;align-items:center !important;padding:22px 0 !important;}
+      main[data-screen-label="03 Case study"] section > div > div[data-m="csrow"] > :nth-child(1){grid-column:1 !important;grid-row:1 !important;align-self:center !important;}
+      main[data-screen-label="03 Case study"] section > div > div[data-m="csrow"] > :nth-child(2){grid-column:2 !important;grid-row:1 !important;align-self:center !important;}
+      main[data-screen-label="03 Case study"] section > div > div[data-m="csrow"] > :nth-child(3){grid-column:2 !important;grid-row:2 !important;align-self:start !important;}
+      main[data-screen-label="03 Case study"] section > div:has(> [data-m="csrow"]){gap:0 !important;}
+      main[data-screen-label="03 Case study"] > section:not([data-m]){padding-top:72px !important;}
+      main[data-screen-label="03 Case study"] > section:has([data-m="csrow"]){padding-top:80px !important;}
+      main[data-screen-label="03 Case study"] > section:not([data-m]){padding-top:88px !important;}
+      main[data-screen-label="03 Case study"] > section:has(> figure){padding-top:24px !important;}
+      [data-m="closeh"]{font-size:40px !important;line-height:1 !important;max-width:none !important;white-space:nowrap !important;}
+      [data-m="closesec"]{padding-top:64px !important;padding-bottom:56px !important;gap:var(--space-6) !important;}
+      [data-m="cslhero"]{padding-top:var(--space-7) !important;padding-bottom:var(--space-6) !important;}
+      [data-m="csart"]{padding-top:40px !important;padding-bottom:var(--space-7) !important;gap:30px !important;}
+      [data-m="csart"] > div{margin-top:0 !important;}
+      div[style*="45% 60%"][style*="0.28"]{background:radial-gradient(360px 300px at 25% 88%,rgba(168,51,102,.28),transparent 70%) !important;}
+      div[style*="45% 60%"][style*="0.14"]{background:radial-gradient(360px 300px at 75% 85%,rgba(168,51,102,.14),transparent 70%) !important;}
+      [data-m="hsubwrap"]{align-items:flex-end !important;margin-left:auto !important;}
+      main h1{font-size:clamp(44px,13vw,60px) !important;line-height:1 !important;}
+      [data-m="igrow2"]{flex-direction:column-reverse !important;}
+    }
+  </style>
+  <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0B0A0A"></rect><text x="50" y="64" text-anchor="middle" font-family="Georgia,serif" font-size="44" font-style="italic" fill="#A83366">Z</text></svg></template>
+</helmet>
+<div style="min-height:100vh;background:var(--surface-page);color:var(--text-primary);font:400 17px/1.5 var(--font-sans);">
+
+  <div style="{{ navWrapStyle }}">
+    <div data-m="mnav" style="display:none;justify-content:space-between;align-items:center;height:64px;padding:0 20px;border-bottom:1px solid {{ mnavBorder }};">
+      <a href="#" onClick="{{ goHomeLink }}" style="display:flex;"><x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Logo" variant="lockup" tone="{{ mLogoTone }}" height="{{ 20 }}" base-path="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/" hint-size="190px,24px"></x-import></a>
+      <button onClick="{{ openMenu }}" aria-label="Open menu" style="appearance:none;background:none;border:0;padding:0;width:44px;height:44px;margin-right:-10px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;gap:7px;cursor:pointer;"><span style="display:block;width:26px;height:1px;background:{{ mnavInk }};"></span><span style="display:block;width:26px;height:1px;background:{{ mnavInk }};"></span></button>
+    </div>
+    <div data-m="dnav">
+    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.NavBar" items="{{ navItems }}" active="{{ navActive }}" on-navigate="{{ onNav }}" tone="{{ navTone }}" base-path="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/" meta="{{ meta }}" dc-props="{{ navProps }}" hint-size="100%,72px" style="overflow: scroll; opacity: 0"></x-import>
+    </div>
+  </div>
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed;inset:0;z-index:100;background:var(--zaya-night);color:var(--zaya-paper);display:flex;flex-direction:column;padding:0 20px 32px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;height:64px;">
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Logo" variant="lockup" tone="paper" height="{{ 20 }}" base-path="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/" hint-size="190px,24px"></x-import>
+        <button onClick="{{ closeMenu }}" aria-label="Close menu" style="appearance:none;background:none;border:0;padding:0;width:44px;height:44px;margin-right:-10px;position:relative;cursor:pointer;"><span style="position:absolute;right:10px;top:50%;width:26px;height:1px;background:var(--zaya-paper);transform:rotate(45deg);"></span><span style="position:absolute;right:10px;top:50%;width:26px;height:1px;background:var(--zaya-paper);transform:rotate(-45deg);"></span></button>
+      </div>
+      <nav style="display:flex;flex-direction:column;margin-top:var(--space-8);border-top:1px solid var(--border-inverse);">
+        <sc-for list="{{ mItems }}" as="m" hint-placeholder-count="4">
+          <a href="#" onClick="{{ m.go }}" style="{{ m.style }}">{{ m.label }}</a>
+        </sc-for>
+      </nav>
+      <a href="mailto:work@zayaproductions.com" style="margin-top:auto;font:300 22px/1.2 var(--font-serif);color:var(--zaya-paper);">work@zayaproductions.com</a>
+    </div>
+  </sc-if>
+
+  <!-- ============ HOME ============ -->
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <main data-screen-label="01 Home">
+      <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Atmosphere" glow="low-right" grid="{{ heroGrid }}" hint-size="100%,760px">
+        
+      <section data-m="hero" style="position: relative; padding: calc(var(--space-10) + 64px) var(--gutter) var(--space-8); min-height: calc(78vh + 64px); display: flex; flex-direction: column; justify-content: flex-end; box-sizing: border-box; line-height: 120">
+          
+          
+          <div style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-6);">Zaya. A creative house, est. 2023</div>
+          <h1 data-m="h1" style="font: 200 var(--type-display-l)/0.92 var(--font-serif); letter-spacing: var(--tracking-display); margin: 0; max-width: 12.5em; text-wrap: balance; line-height: 118.3px; font-style: normal; font-size: 125px">We make your<br>brands <i style="color: var(--zaya-magenta)">undeniable</i></h1>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-7) var(--grid-gap);justify-content:space-between;align-items:flex-end;margin-top:var(--space-8);">
+            <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);"></span>
+            <div data-m="hsubwrap" style="flex:0 1 30em;display:flex;flex-direction:column;gap:24px;align-items:flex-start;">
+              <p data-m="hsub" style="font:300 var(--type-lead)/var(--leading-lead) var(--font-sans);margin:0;text-wrap:pretty;">We build visual worlds, not isolated<br data-m="mbr"> deliverables. Every frame, mark and<br data-m="mbr"> detail is part of the same story.</p>
+              <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Button" variant="ghost" arrow="{{ true }}" on-click="{{ goWork }}" hint-size="140px,48px">See the work</x-import>
+            </div>
+          </div>
+        </section></x-import>
+
+      <section data-m="reelsec" style="padding:0 var(--gutter);">
+        <div data-m="reel" style="position:relative;aspect-ratio:16 / 8;min-height:320px;background:radial-gradient(40% 60% at 70% 70%,rgba(168,51,102,.25),transparent 70%),linear-gradient(170deg,#2a2624,#0b0a0a 70%);overflow:hidden;color:var(--zaya-paper);">
+          <video ref="{{ reelRef }}" src="https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/WEBSITE%20SHOWREEL%20MP4.mp4" poster="https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/Showreel%20thumbnail%20.jpg" onEnded="{{ reelEnded }}" onClick="{{ toggleReel }}" onMouseEnter="{{ reelEnter }}" onMouseLeave="{{ reelLeave }}" playsInline="{{ true }}" preload="auto" style="{{ reelVidStyle }}"></video>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,10,10,.6),transparent 45%);pointer-events:none;"></div>
+          <div data-m="reelbar" style="position:absolute;left:32px;right:32px;bottom:28px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;">
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);">Showreel 2025</span>
+              <span style="font:italic 200 48px/1 var(--font-serif);">Reel</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;">
+              <span data-m="reeltime" style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);">01:07 · Sound on ♪</span>
+              <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="{{ reelLabel }}" tone="night" size="{{ 56 }}" on-click="{{ toggleReel }}" hint-size="56px,56px"><span style="display:inline-block;transform:translateY(2px);">{{ reelIcon }}</span></x-import>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section style="padding:var(--section-y) var(--gutter) var(--space-10);">
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 1 }}" aside="2023–2026" hint-size="100%,30px">Selected work</x-import>
+        <div data-m="hwork" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--space-5) calc(var(--grid-gap) + 40px);margin-top:var(--space-8);padding-bottom:{{ workPadB }};">
+          <sc-for list="{{ homeWork }}" as="p" hint-placeholder-count="4">
+            <article style="{{ p.cellStyle }}">
+              <div onClick="{{ p.openFilm }}" onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:16 / 9;overflow:hidden;background:var(--zaya-night-2);cursor:pointer;">
+                <video ref="{{ loopRef }}" src="{{ p.loop }}" poster="{{ p.image }}" autoPlay="{{ true }}" muted="{{ true }}" loop="{{ true }}" playsInline="{{ true }}" preload="auto" style="{{ p.vidStyle }}"></video>
+                <div style="{{ p.gradStyle }}"></div>
+                <span style="{{ p.ctaStyle }}">View project →</span>
+              </div>
+              <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:baseline;margin-top:18px;">
+                <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ p.num }})</span>
+                <div style="display:flex;flex-direction:column;gap:8px;">
+                  <h3 style="margin:0;font:300 clamp(24px,2.2vw,32px)/1.05 var(--font-serif);letter-spacing:-0.015em;">{{ p.title }}</h3>
+                  <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ p.client }} · {{ p.discipline }}</span>
+                </div>
+                <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ p.year }}</span>
+              </div>
+            </article>
+          </sc-for>
+        </div>
+        <div style="margin-top:var(--space-9);display:flex;justify-content:center;">
+          <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Button" variant="secondary" on-click="{{ goWork }}" style="{{ allWorkBtn }}" hint-size="140px,48px"><span style="display:inline-flex;align-items:center;gap:14px;"><span style="display:inline-block;transform:translateY(2px);">All work</span><span aria-hidden="true" style="display:inline-block;transform:translateY(1px);">→</span></span></x-import>
+        </div>
+      </section>
+
+      <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Atmosphere" tone="night" glow="low-left" hint-size="100%,820px">
+        <section style="padding:var(--section-y) var(--gutter);">
+          <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 2 }}" tone="night" aside="Block Agency" hint-size="100%,30px">Case study</x-import>
+          <div style="{{ featGrid }}">
+            <div onClick="{{ featured.open }}" style="position:relative;aspect-ratio:8 / 9;background:radial-gradient(50% 55% at 30% 72%,rgba(168,51,102,.3),transparent 70%),linear-gradient(200deg,#302a27,#0b0a0a 72%);overflow:hidden;cursor:pointer;">
+              <img src="https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/block%20case%20study%20cover.png" alt="Block Agency case study cover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+            </div>
+            <div style="display:flex;flex-direction:column;gap:var(--space-7);max-width:34em;">
+              <h2 style="margin:0;font:200 clamp(56px,6.4vw,112px)/0.95 var(--font-serif);letter-spacing:var(--tracking-display);color:var(--zaya-paper);">{{ featured.title }}</h2>
+              <p style="margin:0;font:300 clamp(22px,1.9vw,28px)/1.32 var(--font-sans);color:var(--zaya-paper);text-wrap:pretty;">{{ featured.logline }}</p>
+              <div style="display:flex;flex-direction:column;border-top:1px solid var(--border-inverse);">
+                <div style="display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--border-inverse);"><span style="font:500 12px/1.4 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);">Client</span><span style="color:var(--zaya-paper);font-size:18px;">{{ featured.client }}</span></div>
+                <div style="display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--border-inverse);"><span style="font:500 12px/1.4 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);">Scope</span><span style="color:var(--zaya-paper);font-size:18px;text-align:right;">{{ featured.scope }}</span></div>
+                
+              </div>
+              <div style="display:flex;gap:var(--space-6);flex-wrap:wrap;font-size:19px;">
+                <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.TextLink" tone="night" arrow="{{ true }}" on-click="{{ featured.openLink }}" hint-size="180px,24px">Read the case study</x-import>
+                <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.TextLink" tone="night" arrow="{{ true }}" on-click="{{ goCasesLink }}" hint-size="160px,24px">All case studies</x-import>
+              </div>
+            </div>
+          </div>
+        </section>
+      </x-import>
+
+      <section style="padding:var(--section-y) var(--gutter);">
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 3 }}" aside="How we think" hint-size="100%,30px">One world, five distances</x-import>
+        <p style="font:200 clamp(34px,4.2vw,64px)/1.08 var(--font-serif);letter-spacing:-0.02em;margin:var(--space-8) 0 var(--space-9);max-width:18em;text-wrap:pretty;">A brand is seen from many distances. We design it for all of them, so it holds up <i>close</i>, in motion, at length, every day, and over years.</p>
+        <div style="display:flex;flex-direction:column;border-top:1px solid var(--border-default);">
+          <sc-for list="{{ distances }}" as="d" hint-placeholder-count="5">
+            <div data-m="dist" style="display:grid;grid-template-columns:minmax(56px,1fr) minmax(0,5fr) minmax(0,5fr);gap:var(--grid-gap);align-items:center;padding:28px 0;border-bottom:1px solid var(--border-default);transition:color var(--dur-base) var(--ease-out);" style-hover="color:var(--accent);">
+              <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ d.n }})</span>
+              <div style="display:flex;flex-direction:column;gap:10px;">
+                <span style="font:200 clamp(32px,4vw,60px)/1 var(--font-serif);letter-spacing:-0.02em;">{{ d.distance }}</span>
+                <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ d.craft }}</span>
+              </div><span style="color:var(--text-secondary);max-width:28em;text-wrap:pretty;">{{ d.line }}</span>
+              
+            </div>
+          </sc-for>
+        </div>
+      </section>
+    </main>
+  </sc-if>
+
+  <!-- ============ WORK ============ -->
+  <sc-if value="{{ isWork }}" hint-placeholder-val="{{ false }}">
+    <main data-screen-label="02 Work">
+      <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Atmosphere" glow="low-right" grid="{{ heroGrid }}" hint-size="100%,440px">
+        <section data-m="whero" style="padding:var(--space-10) var(--gutter) var(--space-8);">
+          <div style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-6);">(02) Work, 2023–2026</div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--space-7);">
+            <h1 style="font:200 125px/0.92 var(--font-serif);letter-spacing:var(--tracking-display);margin:0;">The <i style="color:var(--accent);">work.</i></h1>
+            <p style="flex:0 1 26em;margin:0;font:300 var(--type-lead)/var(--leading-lead) var(--font-sans);text-wrap:pretty;text-align:right;" data-m="wsub">Films, motion and visual stories for<br data-m="mbr"> brands that want to be remembered.<span data-m="mhide"><br data-m="mbr"> Each piece built to move, not just be seen.</span></p>
+          </div>
+        </section>
+      </x-import>
+      <section style="padding:0 var(--gutter) var(--section-y);">
+          <div style="{{ workGrid }}">
+            <sc-for list="{{ workList }}" as="p" hint-placeholder-count="4">
+              <article style="display:flex;flex-direction:column;gap:18px;">
+                <div onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:16 / 9;overflow:hidden;background:var(--zaya-night-2);">
+                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
+                  <div onClick="{{ p.toggle }}" style="{{ p.tintStyle }}">
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶</span></x-import>
+                  </div>
+                  <button onClick="{{ p.toggleMute }}" aria-label="{{ p.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ p.muteText }}</button>
+                </div>
+                <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:baseline;">
+                  <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ p.num }})</span>
+                  <div style="display:flex;flex-direction:column;gap:8px;">
+                    <h3 style="margin:0;font:300 clamp(24px,2.2vw,32px)/1.05 var(--font-serif);letter-spacing:-0.015em;">{{ p.title }}</h3>
+                    <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ p.client }} · {{ p.discipline }}</span>
+                  </div>
+                  <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ p.year }}</span>
+                </div>
+              </article>
+            </sc-for>
+          </div>
+          <div style="{{ workGridV }}">
+            <sc-for list="{{ workListV }}" as="p" hint-placeholder-count="3">
+              <article style="display:flex;flex-direction:column;gap:18px;">
+                <div onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:9 / 16;overflow:hidden;background:var(--zaya-night-2);">
+                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
+                  <div onClick="{{ p.toggle }}" style="{{ p.tintStyle }}">
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶</span></x-import>
+                  </div>
+                  <button onClick="{{ p.toggleMute }}" aria-label="{{ p.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ p.muteText }}</button>
+                </div>
+                <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:baseline;">
+                  <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ p.num }})</span>
+                  <div style="display:flex;flex-direction:column;gap:8px;">
+                    
+                    <h3 style="margin:0;font:300 clamp(24px,2.2vw,32px)/1.05 var(--font-serif);letter-spacing:-0.015em;">{{ p.title }}</h3><span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ p.client }} · {{ p.discipline }}</span>
+                  </div>
+                  <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ p.year }}</span>
+                </div>
+              </article>
+            </sc-for>
+          </div>
+        
+      </section>
+    </main>
+  </sc-if>
+
+  <!-- ============ CASE STUDIES ============ -->
+  <sc-if value="{{ isCases }}" hint-placeholder-val="{{ false }}">
+    <main data-screen-label="03 Case studies">
+      <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Atmosphere" glow="low-left" grid="{{ heroGrid }}" hint-size="100%,440px">
+        <section data-m="cslhero" style="padding:var(--space-10) var(--gutter) var(--space-8);">
+          <div style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-6);">(03) Case studies</div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--space-7);">
+            <h1 style="font:200 var(--type-display-l)/0.92 var(--font-serif);letter-spacing:var(--tracking-display);margin:0;max-width:9em;">How a world is <i style="color:var(--accent);">built.</i></h1>
+            <p style="flex:0 1 26em;margin:0;font:300 var(--type-lead)/var(--leading-lead) var(--font-sans);text-wrap:pretty;">The brief, the idea, and every surface it reached. Written slowly, for people who like to know how things are made.</p>
+          </div>
+        </section>
+      </x-import>
+      <section style="padding:0 var(--gutter) var(--section-y);display:flex;flex-direction:column;">
+        <sc-for list="{{ caseList }}" as="c" hint-placeholder-count="4">
+          <article data-m="csart" style="display:flex;flex-direction:column;gap:var(--space-7);padding:var(--space-9) 0;border-top:1px solid var(--zaya-ink);">
+            <div style="display:flex;align-items:baseline;gap:16px;font:500 12px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;">
+              <span style="color:var(--accent);">({{ c.num }})</span><span>{{ c.client }}</span>
+            </div>
+            <div style="{{ featGrid }}">
+              <div onClick="{{ c.open }}" style="{{ c.coverStyle }}">
+                <sc-if value="{{ c.image }}" hint-placeholder-val="{{ false }}">
+                  <img src="{{ c.image }}" alt="{{ c.title }} cover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+                </sc-if>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:var(--space-7);max-width:34em;">
+                <h2 onClick="{{ c.open }}" style="margin:0;font:200 clamp(56px,6.4vw,112px)/0.95 var(--font-serif);letter-spacing:var(--tracking-display);cursor:pointer;transition:color var(--dur-base) var(--ease-out);" style-hover="color:var(--accent);font-style:italic;">{{ c.title }}</h2>
+                <p style="margin:0;font:300 clamp(22px,1.9vw,28px)/1.32 var(--font-sans);text-wrap:pretty;">{{ c.logline }}</p>
+                <div style="display:flex;flex-direction:column;border-top:1px solid var(--border-default);">
+                  <div style="display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--border-default);"><span style="font:500 12px/1.4 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">Client</span><span style="font-size:18px;">{{ c.client }}</span></div>
+                  <div style="display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--border-default);"><span style="font:500 12px/1.4 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">Scope</span><span style="font-size:18px;text-align:right;">{{ c.scope }}</span></div>
+                </div>
+                <div style="font-size:19px;">
+                  <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.TextLink" arrow="{{ true }}" on-click="{{ c.openLink }}" hint-size="180px,24px">Read the case study</x-import>
+                </div>
+              </div>
+            </div>
+          </article>
+        </sc-for>
+        <article data-m="csart" style="display:flex;flex-direction:column;gap:var(--space-7);padding:var(--space-9) 0;border-top:1px solid var(--zaya-ink);">
+          <div style="display:flex;align-items:baseline;gap:16px;font:500 12px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;"><span style="color:var(--accent);">(02)</span></div>
+          <h2 style="margin:0;font:200 clamp(56px,6.4vw,112px)/0.95 var(--font-serif);letter-spacing:var(--tracking-display);color:var(--text-muted);">Coming <i>soon.</i></h2>
+        </article>
+      </section>
+    </main>
+  </sc-if>
+
+  <!-- ============ FILM ============ -->
+  <sc-if value="{{ isFilm }}" hint-placeholder-val="{{ false }}">
+    <main data-screen-label="02 Film">
+      <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Atmosphere" tone="night" glow="low-right" hint-size="100%,900px">
+        <section style="padding:var(--space-9) var(--gutter) var(--section-y);color:var(--zaya-paper);">
+          <a href="#" onClick="{{ goHomeLink }}" style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);text-decoration:none;" style-hover="color:var(--accent);">← Selected work</a>
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:var(--space-6);margin-top:var(--space-8);">
+            <h1 style="margin:0;font:200 clamp(56px,8vw,140px)/0.9 var(--font-serif);letter-spacing:-0.025em;text-wrap:balance;">{{ film.title }}</h1>
+            <div style="display:flex;flex-direction:column;gap:10px;text-align:right;">
+              <span style="font:300 24px/1.2 var(--font-sans);">{{ film.client }}</span>
+              <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);">{{ film.discipline }} · {{ film.year }}</span>
+            </div>
+          </div>
+          <div style="position:relative;aspect-ratio:16 / 9;margin-top:var(--space-8);overflow:hidden;background:var(--zaya-night-2);">
+            <video ref="{{ filmRef }}" src="{{ film.video }}" poster="{{ film.image }}" playsInline="{{ true }}" preload="auto" onClick="{{ filmTogglePlay }}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
+            <button onClick="{{ filmToggleMute }}" aria-label="{{ filmMuteLabel }}" style="position:absolute;right:20px;bottom:18px;padding:10px 14px;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ filmMuteText }}</button>
+          </div>
+        </section>
+      </x-import>
+    </main>
+  </sc-if>
+
+  <!-- ============ CASE STUDY DETAIL ============ -->
+  <sc-if value="{{ isCase }}" hint-placeholder-val="{{ false }}">
+    <main data-screen-label="03 Case study">
+      <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Atmosphere" tone="night" glow="low-right" hint-size="100%,640px">
+        <section data-m="cshero" style="padding:var(--space-9) var(--gutter) var(--space-8);color:var(--zaya-paper);">
+          <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);margin-bottom:var(--space-9);">
+            <a href="#" onClick="{{ goCasesLink }}" style="color:var(--zaya-paper);" style-hover="color:var(--accent);">← All case studies</a>
+            <span>Case study (01)</span>
+          </div>
+          <h1 style="font:200 var(--type-display-xl)/0.9 var(--font-serif);letter-spacing:var(--tracking-display);margin:0;max-width:10em;">{{ c.title }}</h1>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);justify-content:space-between;align-items:flex-end;margin-top:var(--space-8);">
+            <p data-m="cssub" style="flex:1 1 360px;max-width:26em;margin:0;font:300 var(--type-lead)/var(--leading-lead) var(--font-sans);text-wrap:pretty;">{{ c.logline }}</p>
+            <div data-m="mhide" style="flex:0 1 460px;display:flex;flex-direction:column;gap:10px;"><span style="font:300 var(--type-heading-m)/1.1 var(--font-serif);text-align:right;">Dubai</span></div>
+        </div>
+      </section>
+    </x-import>
+      <section style="padding:var(--section-y) var(--gutter) 0;">
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 1 }}" aside="{{ c.client }}" hint-size="100%,30px">The brief</x-import>
+        <p data-m="csbrief" style="margin:var(--space-8) 0 0 auto;max-width:24em;font:300 clamp(26px,2.6vw,40px)/1.22 var(--font-serif);letter-spacing:-0.015em;text-wrap:pretty;">{{ c.brief }}</p>
+      </section>
+      <section style="padding:var(--section-y) var(--gutter) 0;">
+        <figure style="margin:0;">
+          <img src="assets/block/homepage.png" alt="Block Agency homepage" style="box-sizing:border-box;width:100%;height:auto;display:block;border:1px solid var(--border-default);">
+          <figcaption style="margin-top:14px;font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">(i) Homepage, blockagency.io</figcaption>
+        </figure>
+      </section>
+      <section style="padding:var(--section-y) var(--gutter) 0;">
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 2 }}" hint-size="100%,30px">The idea</x-import>
+        <p data-m="csidea" style="margin:var(--space-8) 0 0;max-width:16em;font:200 clamp(40px,5vw,80px)/1.02 var(--font-serif);letter-spacing:-0.02em;text-wrap:balance;">{{ c.ideaA }} <i style="color:var(--accent);">{{ c.ideaEm }}</i>{{ c.ideaB }}</p>
+        <p data-m="csbody" style="margin:var(--space-8) 0 0 auto;max-width:34em;color:var(--text-secondary);font-size:18px;text-wrap:pretty;">{{ c.approach }}</p>
+      </section>
+      <section style="padding:var(--section-y) var(--gutter) 0;">
+        <figure style="margin:0;background:var(--zaya-night);padding:clamp(20px,4vw,64px);">
+          <img src="assets/block/website-screens.png" alt="Block Agency website pages in Figma" style="width:100%;height:auto;display:block;">
+        </figure>
+        <figcaption style="margin-top:14px;font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">(ii) Website, home, work, case study and capabilities</figcaption>
+      </section>
+      <section style="padding:var(--section-y) var(--gutter) 0;">
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 3 }}" aside="@blockagencyooh" hint-size="100%,30px">Social</x-import>
+        <div style="display:flex;flex-direction:column;gap:var(--section-y);margin-top:var(--space-8);">
+          <div style="{{ igRow }}">
+            <div style="flex:0 1 32em;display:flex;flex-direction:column;gap:var(--space-6);max-width:32em;">
+              <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">(iii) Formats</span>
+              <h3 data-m="csh3" style="margin:0;font:300 clamp(32px,3.4vw,52px)/1.05 var(--font-serif);letter-spacing:-0.02em;text-wrap:balance;">A feed built like a <i style="color:var(--accent);">media plan.</i></h3>
+              <p data-m="csbody" style="margin:0;color:var(--text-secondary);font-size:18px;text-wrap:pretty;">Recurring series do the heavy lifting: The Global 5 ranks the sites worth buying in each region, city posts put one screen in context, and every cover follows the same system. Bold Oswald headlines, one burnt orange highlight, the Block wordmark top left.</p>
+            </div>
+            <figure style="margin:0;flex:0 1 460px;width:100%;max-width:460px;"><img src="assets/block/instagram-1.png" alt="Block Agency Instagram grid" style="width:100%;aspect-ratio:738 / 1515;object-fit:cover;object-position:bottom;display:block;"></figure>
+          </div>
+          <div data-m="igrow2" style="{{ igRow }}">
+            <figure style="margin:0;flex:0 1 460px;width:100%;max-width:460px;"><img src="assets/block/instagram-2.png" alt="Block Agency Instagram grid, continued" style="width:100%;aspect-ratio:738 / 1515;object-fit:cover;object-position:bottom;display:block;"></figure>
+            <div style="flex:0 1 32em;display:flex;flex-direction:column;gap:var(--space-6);max-width:32em;">
+              <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">(iv) Proof</span>
+              <h3 data-m="csh3" style="margin:0;font:300 clamp(32px,3.4vw,52px)/1.05 var(--font-serif);letter-spacing:-0.02em;text-wrap:balance;">Every post earns the <i style="color:var(--accent);">next brief.</i></h3>
+              <p data-m="csbody" style="margin:0;color:var(--text-secondary);font-size:18px;text-wrap:pretty;">Campaign breakdowns like Beyond’s Passo launch in the UK sit next to hard numbers and market notes, so the feed reads as Block’s case for out-of-home. It’s industry intelligence first and self-promotion second.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section style="padding:var(--section-y) var(--gutter) 0;">
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 4 }}" hint-size="100%,30px">What we made</x-import>
+        <div style="display:flex;flex-direction:column;border-top:1px solid var(--border-default);margin-top:var(--space-8);">
+          <sc-for list="{{ c.surfaces }}" as="s" hint-placeholder-count="4">
+            <div data-m="csrow" style="display:grid;grid-template-columns:minmax(56px,1fr) minmax(0,4fr) minmax(0,6fr);gap:var(--grid-gap);align-items:baseline;padding:28px 0;border-bottom:1px solid var(--border-default);">
+              <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ s.n }})</span>
+              <span data-m="csname" style="font:300 clamp(28px,3vw,44px)/1.05 var(--font-serif);letter-spacing:-0.015em;">{{ s.name }}</span>
+              <span data-m="csline" style="color:var(--text-secondary);text-wrap:pretty;">{{ s.line }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </section>
+      <section style="padding:var(--section-y) var(--gutter);">
+        <blockquote data-m="csquote" style="margin:0;max-width:18em;font:200 clamp(40px,5.4vw,88px)/1.02 var(--font-serif);letter-spacing:-0.02em;text-wrap:balance;">“{{ c.quote }}”</blockquote>
+        <p style="margin:var(--space-6) 0 0;font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">{{ c.quoteBy }}</p>
+      </section>
+    </main>
+  </sc-if>
+
+  <!-- ============ CONTACT ============ -->
+  <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+    <main data-screen-label="05 Contact">
+      <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Atmosphere" glow="low-left" grid="{{ true }}" hint-size="100%,1100px">
+        <section data-m="chero" style="padding:var(--space-10) var(--gutter) var(--section-y);">
+          <div style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);margin-bottom:var(--space-6);">(05) CONTACT</div>
+          <h1 style="font:200 var(--type-display-l)/0.92 var(--font-serif);letter-spacing:var(--tracking-display);margin:0;max-width:10em;">Have something<br>worth <i style="color: var(--zaya-magenta)">making ?</i></h1>
+          <div style="display:flex;flex-wrap:wrap;gap:var(--space-9) var(--space-8);justify-content:space-between;margin-top:var(--space-9);">
+            <div style="flex:1 1 520px;max-width:760px;">
+              <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+                <div style="display:flex;flex-direction:column;gap:var(--space-7);">
+                  <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Input" label="Your name" size="lg" placeholder="" value="{{ fName }}" on-change="{{ setName }}" error="{{ nameErr }}" hint-size="100%,90px"></x-import>
+                  <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Input" label="Email" type="email" value="{{ fEmail }}" on-change="{{ setEmail }}" error="{{ emailErr }}" hint-size="100%,70px"></x-import>
+                  <div style="display:flex;flex-direction:column;gap:18px;">
+                    <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">What does the world need</span>
+                    <div style="display:flex;flex-wrap:wrap;gap:18px 32px;">
+                      <sc-for list="{{ scopeItems }}" as="s" hint-placeholder-count="6">
+                        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Checkbox" label="{{ s.label }}" checked="{{ s.on }}" on-change="{{ s.toggle }}" hint-size="120px,24px"></x-import>
+                      </sc-for>
+                    </div>
+                  </div>
+                                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Input" label="Tell us about it" value="{{ fMsg }}" on-change="{{ setMsg }}" multiline="{{ true }}" rows="{{ 4 }}" hint="What you’re making, who it’s for, and how it should feel." hint-size="100%,160px"></x-import>
+                  <div>
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Button" variant="primary" size="lg" arrow="{{ true }}" on-click="{{ send }}" disabled="{{ sending }}" hint-size="220px,60px">{{ sendLabel }}</x-import>
+                  </div>
+                  <sc-if value="{{ sendErr }}" hint-placeholder-val="{{ false }}"><p style="margin:0;color:var(--state-error);font-size:15px;">{{ sendErr }}</p></sc-if>
+                </div>
+              </sc-if>
+              <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+                <div style="display:flex;flex-direction:column;gap:var(--space-6);padding-top:var(--space-6);border-top:1px solid var(--zaya-ink);">
+                  <p style="margin:0;font:200 var(--type-display-s)/1.05 var(--font-serif);letter-spacing:-0.02em;max-width:14em;">Thank you. We read everything, and reply <i>within the week.</i></p>
+                  <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Toast" tone="night" action="See the work" on-action="{{ goWork }}" hint-size="360px,52px">Message received · India, {{ india }}</x-import>
+                </div>
+              </sc-if>
+            </div>
+            <aside style="flex:0 1 320px;display:flex;flex-direction:column;gap:var(--space-7);">
+              <div style="display:flex;flex-direction:column;gap:10px;"><span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">New work</span><a href="mailto:work@zayaproductions.com" style="font:300 var(--type-heading-s)/1.2 var(--font-serif);">work@zayaproductions.com</a></div>
+              <div style="display:flex;flex-direction:column;gap:10px;"><span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">Studio</span><span style="font-size:17px;">India · {{ india }}</span></div>
+            </aside>
+          </div>
+        </section>
+      </x-import>
+    </main>
+  </sc-if>
+
+  <!-- ============ CLOSING + FOOTER ============ -->
+  <sc-if value="{{ showClosing }}" hint-placeholder-val="{{ true }}">
+    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Atmosphere" tone="night" grid="{{ true }}" glow="low-right" hint-size="100%,560px">
+      <section data-m="closesec" style="padding:var(--section-y) var(--gutter);display:flex;flex-wrap:wrap;gap:var(--space-8);justify-content:space-between;align-items:flex-end;color:var(--zaya-paper);">
+        <h2 data-m="closeh" style="flex:1 1 560px;max-width:11em;font:200 var(--type-display-l)/0.92 var(--font-serif);letter-spacing:var(--tracking-display);margin:0;">Have something worth&nbsp;<br><i>making&nbsp;</i>?</h2>
+        <div style="flex:0 1 300px;display:flex;flex-direction:column;gap:24px;align-items:flex-start;">
+          <p style="color:var(--text-inverse-muted);margin:0;">We're glad to help.</p>
+          <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Button" tone="night" on-click="{{ goContact }}" style="{{ allWorkBtn }}" hint-size="230px,48px"><span style="display:inline-flex;align-items:center;gap:14px;"><span style="display:inline-block;transform:translateY(2px);">Start a conversation</span><span aria-hidden="true" style="display:inline-block;transform:translateY(3px);">→</span></span></x-import>
+        </div>
+      </section>
+    </x-import>
+  </sc-if>
+
+  <footer style="background:var(--zaya-night);color:var(--text-inverse);padding:var(--space-9) var(--gutter) var(--space-6);border-top:1px solid var(--border-inverse);">
+    <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);justify-content:space-between;align-items:flex-end;">
+      <div style="display:flex;flex-direction:column;gap:20px;">
+        
+        <a href="mailto:work@zayaproductions.com" style="font:200 clamp(36px,5vw,76px)/1 var(--font-serif);letter-spacing:-0.02em;color:var(--zaya-paper);" style-hover="color:var(--accent);">work@<i>zaya</i>productions.com</a>
+      </div>
+      <div style="display:flex;gap:var(--space-9);font-size:16px;">
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <sc-for list="{{ footerLinks }}" as="l" hint-placeholder-count="5">
+            <a href="#" onClick="{{ l.go }}" style="color:var(--zaya-paper);" style-hover="color:var(--accent);">{{ l.label }}</a>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center;margin-top:var(--space-9);padding-top:24px;border-top:1px solid var(--border-inverse);">
+      <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.Logo" variant="lockup" tone="paper" height="{{ 18 }}" base-path="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/" hint-size="200px,24px"></x-import>
+      <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);">© 2026 Zaya Productions · India</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroGrid&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;},&quot;defaultWorkView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;grid&quot;,&quot;index&quot;],&quot;default&quot;:&quot;grid&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+const PROJECTS=[
+{id:"nocturne",title:"Platform Narrative",loop:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/CF%20platform%20narrative%20loop.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/platform%20narrative%20thumbnail.jpg",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/CF%20PLATFORM%20WEB.mp4",client:"Captain Fresh",discipline:"Motion",tags:["Identity","Motion","Social"],scope:"Identity · Sleeves · Living title card",year:"2025",aspect:"16 / 9",location:"India",runtime:"00:45",case:true,
+logline:"An identity for an ambient label that changes with the hour it is seen.",
+brief:"A small label releasing music for late hours. They had no logo, a loyal audience, and a feeling they couldn’t quite name.",
+ideaA:"An identity that",ideaEm:"dims",ideaB:" as the night goes on.",
+approach:"The wordmark is drawn in four weights, each tied to a time of night. Sleeves, site and the social title card follow the listener’s local hour, the later it is, the lighter it gets.",
+surfaces:[["Identity","A four-weight wordmark, a sleeve system and a restrained night palette."],["Motion","A 45-second living title card that opens every release."],["Social","Release templates that keep the same clock."]],
+quote:"Our listeners noticed before we told them.",quoteBy:"Founder, Nocturne Records",
+credits:[["Identity","Zaya"],["Type design","Zaya"],["Motion","Zaya"],["Art direction","Zaya"]],
+frames:["Weight III · 02:00","Sleeve series, the first twelve","Title card, frame 312"]},
+{id:"soft",loop:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/aspora%20loop%20video.mp4",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Preview%20v6.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/aspora%20thumbnail.png",title:"Financial Advertisement",client:"Aspora",discipline:"Motion",tags:["Motion","Film","Identity"],scope:"Motion language · Product film · Launch",year:"2025",aspect:"16 / 9",location:"India",runtime:"01:30",case:true,
+logline:"A motion language for a company that builds quiet hardware.",
+brief:"Aspora makes speakers with almost nothing on them, no lights, no logos you can see from across a room. Their launch needed to move without shouting.",
+ideaA:"We gave every object one rule: move like something",ideaEm:"breathing",ideaB:".",
+approach:"Every animation, interface, product film, social loop, shares one easing curve and one rhythm, taken from a slow exhale. It is documented as a system, so Aspora’s own team can keep extending it.",
+surfaces:[["Motion","Timing, easing, transitions and type behaviour, delivered as a living guide."],["Film","A 90-second product film rendered in 3D, scored with room tone."],["Identity","An animated wordmark and a sound logo, two seconds long."]],
+quote:"People said the film felt quiet. That was the whole brief.",quoteBy:"Founder, Aspora",
+credits:[["Creative direction","Zaya"],["Motion system","Zaya"],["3D & lighting","Zaya"],["Sound","with Field Notes Audio"]],
+frames:["Exhale curve · 2.4s","Unit 01, studio light","Interface transition, frame 48"]},
+{id:"quiet",loop:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20loop%20video%202.mp4",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20Hackathon%20for%20web.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/groww%20hackathon%20thumbnail.png",title:"Hackathon",client:"Groww",discipline:"Film",tags:["Identity","Film","Social","Direction"],scope:"Brand Strategy ·  Website · Social",year:"2026",aspect:"16 / 9",location:"India",runtime:"04:12",case:true,
+logline:"Repositioning global OOH as a discipline of strategy, culture, and visibility.",
+brief:"Groww had a beautiful perfume and a loud visual life, six agencies, six tones, a feed that looked borrowed. They asked for a campaign. We suggested they needed a world first.",
+ideaA:"Scent is what happens in the",ideaEm:"pauses",ideaB:", so we built everything around them.",
+approach:"We shot on 35mm across three nights, lit only by practicals and one rose-gelled lamp. The same light, pace and typographic voice then moved into the identity, the packaging films and eighteen months of social.",
+surfaces:[["Identity","A refined wordmark, a night palette and a serif set for labels and titles."],["Film","A four-minute campaign film and six cut-downs, graded from the same negative."],["Social","A frame system for the feed, stills, slow loops, one sentence per post."],["Direction","Ongoing creative direction for launches and retail windows."]],
+quote:"It is the first time the brand has felt like the perfume.",quoteBy:"Creative director, Groww",
+credits:[["Creative direction","Zaya"],["Direction & camera","Zaya"],["Identity","Zaya"],["Colour","Zaya"],["Original score","with Halden Sound"]],
+frames:["Night one · Alfama, 23:40","The lamp · rose gel, ¼ CTO","Title card, set in the new serif"]},
+{id:"salt",title:"Human Rights",loop:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/equitas%20loop.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/equitas%20thumbnail.jpg",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Equitas.mp4",client:"Equitas",discipline:"Film",tags:["Film","Direction","Social"],scope:"Campaign film · Stills · Social",year:"2024",aspect:"16 / 9",location:"India",runtime:"02:48",case:false,
+logline:"A campaign film following a single boat from dusk to first light.",
+brief:"A swimwear atelier wanted a campaign that felt like the sea at the edges of the day, not a beach, not a summer.",
+ideaA:"One boat, one night, told in",ideaEm:"real time",ideaB:".",
+approach:"We filmed a single crossing from dusk to first light with a crew of five, then cut the campaign, stills and social from that one night, so every piece shares the same air.",
+surfaces:[["Film","A 2:48 campaign film and four fifteen-second edits."],["Direction","Casting, wardrobe and set direction on location."],["Social","A stills-led feed built from the night’s contact sheets."]],
+quote:"It felt like we had been out there with them.",quoteBy:"Head of brand, Atelier Mer",
+credits:[["Direction","Zaya"],["Cinematography","Zaya"],["Edit & grade","Zaya"],["Sound design","with Halden Sound"]],
+frames:["Dusk · 20:51","The crossing · 03:10","First light · 06:22"]},
+{id:"chambers",title:"GrowwEdge",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20Edge%20Video%201%20for%20web.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/thumbnail%20for%20growwedge.jpg",client:"Groww",discipline:"YouTube video",tags:["Motion","Identity","Direction"],scope:"Generative motion · Wayfinding · Installation",year:"2024",aspect:"16 / 9",location:"India",runtime:"Loop",case:true,
+logline:"Ambient motion for twelve rooms that never plays the same way twice.",
+brief:"Kōen wanted each of its rooms to feel like a place you had arrived at, not a room you had been assigned.",
+ideaA:"Every room keeps its own",ideaEm:"weather",ideaB:".",
+approach:"We built a generative piece for each room, driven by daylight and occupancy, then carried its palette into wayfinding, key cards and the in-room screens.",
+surfaces:[["Motion","Twelve generative pieces running continuously on in-room screens."],["Identity","Room marks and wayfinding drawn from each piece’s palette."],["Direction","Installation direction across two properties."]],
+quote:"Guests ask which room they had, as if it were a season.",quoteBy:"Director of experience, Kōen Hotels",
+credits:[["Creative direction","Zaya"],["Generative motion","Zaya"],["Wayfinding","Zaya"],["Engineering","with Kinetic Room"]],
+frames:["Room 04, late afternoon","The key card set","Room 11–05:40"]},
+{id:"lowlight",title:"Optimus",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/CF%20Optimus%20Web.mp4",image:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/CF%20Optimus%20thumbnail.png",client:"Captain Fresh",discipline:"Motion",tags:["Motion","Film"],scope:"Main titles · Typography",year:"2023",aspect:"16 / 9",location:"India",runtime:"01:05",case:false,
+logline:"Main titles for a six-part documentary about the night shift.",
+brief:"A documentary about people who work while the city sleeps needed titles that felt like the end of a long shift.",
+ideaA:"Type that appears the way eyes",ideaEm:"adjust",ideaB:" to the dark.",
+approach:"Each title resolves slowly out of underexposed footage, the letterforms catching only the light already in frame.",
+surfaces:[["Motion","A main title sequence and six episode cards."],["Film","An opening montage cut from the series’ own rushes."]],
+quote:"The titles set the tone for the whole series.",quoteBy:"Series director, Vessel",
+credits:[["Titles","Zaya"],["Typography","Zaya"],["Edit","Zaya"],["Colour","Zaya"]],
+frames:["Episode one card","Night market · 04:12","Final title, frame 1,560"]},
+{id:"block",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/block%20case%20study%20cover.png",title:"Block Agency",client:"Block Agency",discipline:"Identity",tags:["Identity","Website","Social"],scope:"Brand identity · Website · Social",year:"2026",aspect:"16 / 9",location:"Dubai",runtime:"",case:true,
+logline:"Repositioning global OOH as a discipline of strategy, culture, and visibility.",
+brief:"Block is an independent out-of-home agency, headquartered in Dubai and buying across 60+ markets. The work was already on the best screens in the world, from Piccadilly Circus to New York. The brand wasn't. It looked like a media vendor, and they needed it to read like the specialist they are.",
+ideaA:"A billboard gets",ideaEm:"three seconds",ideaB:", so the brand had to land in one.",
+approach:"We built the identity the way Block builds a campaign: for distance, for speed, for a city that isn't paying attention. Oswald set tall and tight, a single burnt orange held against matte black and paper white, and a wordmark with clear space enough to survive any screen. The same rules then carried into a website that sells the streets before it sells the service, and a social system that treats every post like a placement.",
+surfaces:[["Identity","Wordmark and brand element, clear-space rules, a three-colour palette of burnt orange, matte black and paper white, and an Oswald and Inter type pairing."],["Website","blockagency.io, designed around the work itself: selected work, cities, capabilities and The Feed, Block's own industry intelligence."],["Social","A post and motion system for LinkedIn and Instagram, campaign breakdowns and market notes built to be read at a scroll."],["Guidelines","A brand guide that keeps the system consistent across offices in Dubai, London and Hong Kong."]],
+quote:"We turn the world's streets into your stage.",quoteBy:"Block Agency",
+credits:[["Brand identity","Zaya"],["Brand guidelines","Zaya"],["Website design","Zaya"],["Social","Zaya"]],
+frames:["The wordmark, burnt orange on matte black","Homepage, the world's streets as a stage","Social system, campaign breakdown"]},
+{id:"naga",vertical:true,title:"Naga",client:"Ahankarwear",discipline:"Social",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Naga%20export%20v3.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/ahankar%20naga.png",tags:["Social"],scope:"Social",year:"2025",aspect:"9 / 16",location:"India",runtime:"",case:false,logline:"",brief:"",surfaces:[],credits:[],frames:["","",""]},
+{id:"bsc",vertical:true,title:"Showcase",client:"Bombay Shaving Company",discipline:"Social",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/BSC.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/BSC.png",tags:["Social"],scope:"Social",year:"2025",aspect:"9 / 16",location:"India",runtime:"",case:false,logline:"",brief:"",surfaces:[],credits:[],frames:["","",""]},
+{id:"blockteaser",vertical:true,title:"Brand Film",client:"Block Agency",discipline:"Social",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Block%20Agency%20Brand%20Teaser%20Alternate%20version%20v2.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/Block%20agency%20brand%20film%20thumbnail.png",tags:["Social"],scope:"Social",year:"2025",aspect:"9 / 16",location:"India",runtime:"",case:false,logline:"",brief:"",surfaces:[],credits:[],frames:["","",""]}];
+const PAT=[{c:"1 / span 7",m:0},{c:"9 / span 4",m:160},{c:"2 / span 5",m:0},{c:"8 / span 5",m:96},{c:"1 / span 6",m:40},{c:"8 / span 5",m:160}];
+const NAV=["Work","Case studies","Contact"];
+const pad=n=>String(n).padStart(2,"0");
+const SCOPES=["Identity","Motion","Film","Social","Creative direction","Not sure yet"];
+class Component extends DCLogic {
+  state={page:"Home",caseId:"quiet",filter:"All",view:null,sent:false,scopes:[],when:"",w:1200,lis:"",lon:""};
+  componentDidMount(){
+    try{const q=new URLSearchParams(location.search);if(q.get("page")){this.setState({page:q.get("page"),caseId:q.get("case")||"block"});}else{const s=JSON.parse(localStorage.getItem("zaya-site")||"{}");if(s.page&&s.page!=="About")this.setState({page:s.page,caseId:s.caseId||"quiet"});}}catch(e){}
+    const f=tz=>new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:tz});
+    const tick=()=>this.setState({lis:f("Europe/Lisbon"),lon:f("Europe/London"),noi:f("Asia/Kolkata")});tick();this.iv=setInterval(tick,30000);
+    this.onR=()=>this.setState({w:window.innerWidth});this.onR();window.addEventListener("resize",this.onR);
+  }
+  componentWillUnmount(){clearInterval(this.iv);window.removeEventListener("resize",this.onR);}
+  go(page,caseId){const id=caseId||this.state.caseId;this.setState({page,caseId:id,sent:false});try{localStorage.setItem("zaya-site",JSON.stringify({page,caseId:id}));}catch(e){}window.scrollTo(0,0);}
+  link(fn){return e=>{if(e&&e.preventDefault)e.preventDefault();fn();};}
+  decorate(p){const i=PROJECTS.indexOf(p);return {...p,num:pad(i+1),f1:p.frames[0],f2:p.frames[1],f3:p.frames[2],clientYear:p.client+" · "+p.year,
+    surfaces:p.surfaces.map((s,k)=>({n:pad(k+1),name:s[0],line:s[1]})),credits:p.credits.map(c=>({role:c[0],by:c[1]})),
+    card:{index:i+1,title:p.title,client:p.client,discipline:p.discipline,year:p.year,aspect:p.aspect,image:p.image},
+    open:()=>this.go("Case",p.id),openLink:this.link(()=>this.go("Case",p.id))};}
+  async send(){const s=this.state,name=(s.fName||"").trim(),email=(s.fEmail||"").trim();
+    const ne=name?null:"Please add your name",ee=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)?null:"Please add a valid email";
+    if(ne||ee){this.setState({nameErr:ne,emailErr:ee});return;}
+    this.setState({sending:true,sendErr:""});
+    try{const r=await fetch("https://formsubmit.co/ajax/work@zayaproductions.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},
+      body:JSON.stringify({name,email,_replyto:email,needs:(s.scopes||[]).join(", ")||"Not specified",message:s.fMsg||"",_subject:"New enquiry from "+name+" · zayaproductions.com",_template:"table",_captcha:"false"})});
+      const j=await r.json().catch(()=>({}));if(!r.ok||j.success==="false"||j.success===false)throw new Error(j.message||"failed");
+      this.setState({sending:false,sent:true,fName:"",fEmail:"",fMsg:"",scopes:[]});
+    }catch(e){this.setState({sending:false,sendErr:"Something went wrong. Please email work@zayaproductions.com directly."});}
+  }
+  wrefs={};
+  cells(list){const n=this.state.w<820;return list.map((p,i)=>({...this.decorate(p),cellStyle:{gridColumn:n?"1 / -1":PAT[i%6].c,marginTop:n?0:PAT[i%6].m}}));}
+  renderVals(){
+    const s=this.state,page=s.page,n=s.w<820;
+    const view=s.view||this.props.defaultWorkView||"grid";
+    const c=this.decorate(PROJECTS.find(p=>p.id===s.caseId)||PROJECTS[0]);
+    const ci=PROJECTS.findIndex(p=>p.id===c.id);const next=this.decorate(PROJECTS[(ci+1)%PROJECTS.length]);
+    const wtile=(p,i)=>{const vr=this.wrefs[p.id]||(this.wrefs[p.id]=React.createRef());const m=!!(s.wm||{})[p.id],playing=s.wp===p.id,hv=s.whov===p.id;
+        return {...this.decorate(p),num:pad(i+1),vref:vr,muted:m,muteText:m?"Sound off":"Sound on",muteLabel:m?"Unmute":"Mute",
+        tintStyle:{position:"absolute",inset:0,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",background:"rgba(11,10,10,.45)",opacity:!playing&&hv?1:0,pointerEvents:playing?"none":"auto",transition:"opacity var(--dur-slow) var(--ease-out)"},
+        enter:()=>this.setState({whov:p.id}),leave:()=>this.setState({whov:null}),ended:()=>this.setState({wp:null}),
+        toggleMute:()=>{const v=vr.current;if(v)v.muted=!m;this.setState({wm:{...(s.wm||{}),[p.id]:!m}});},
+        toggle:()=>{const v=vr.current;if(!v)return;if(v.paused){Object.values(this.wrefs).forEach(r=>{if(r.current&&r.current!==v)r.current.pause();});v.muted=m;v.play();this.setState({wp:p.id});}else{v.pause();this.setState({wp:null});}}};};
+    const feat=this.decorate(PROJECTS.find(p=>p.id==="block")||PROJECTS[0]);
+    const cats=["All","Identity","Motion","Film","Social","Direction"];
+    const filtered=s.filter==="All"?PROJECTS:PROJECTS.filter(p=>p.tags.includes(s.filter));
+    const night=page==="Case"||page==="Film";
+    const goto=p=>()=>this.go(p);
+    return {
+      reelRef:this.reelRef||(this.reelRef=React.createRef()),
+      reelIcon:this.state.reelPlaying?"❚❚":"▶",
+      reelLabel:this.state.reelPlaying?"Pause reel":"Play reel",
+      reelEnded:()=>this.setState({reelPlaying:false}),
+      reelEnter:()=>this.setState({reelHov:true}),reelLeave:()=>this.setState({reelHov:false}),
+      reelVidStyle:{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",display:"block",cursor:"pointer",transform:s.reelHov?"scale(1.035)":"scale(1)",transition:"transform var(--dur-cinematic) var(--ease-out)"},
+      toggleReel:()=>{const v=this.reelRef.current;if(!v)return;if(v.paused){v.muted=false;v.play();this.setState({reelPlaying:true});}else{v.pause();this.setState({reelPlaying:false});}},
+      isHome:page==="Home",isWork:page==="Work",isCases:page==="Case studies",isCase:page==="Case",isContact:page==="Contact",
+      showClosing:page!=="Contact"&&page!=="Case"&&page!=="Film",
+      heroGrid:this.props.heroGrid??false,
+      navItems:["Home",...NAV],navActive:page==="Case"?"Case studies":page==="Film"?"Work":page,navTone:night?"night":"light",
+      navWrapStyle:{position:"sticky",top:0,zIndex:50,background:night?"var(--zaya-night)":"rgba(246,244,241,0.94)"},
+      navProps:{style:{background:"transparent"}},tabsNoWrap:{style:{flexWrap:"nowrap"}},
+      meta:"",lisbon:s.lis,london:s.lon,india:s.noi,
+      onNav:it=>this.go(NAV.includes(it)?it:"Home"),
+      goWork:goto("Work"),goContact:goto("Contact"),
+      goCasesLink:this.link(goto("Case studies")),
+      footerLinks:["Home",...NAV].map(l=>({label:l,go:this.link(goto(l))})),
+      homeWork:this.cells(PROJECTS.slice(0,4)).map((p,i)=>{const hv=s.hov===p.id,ease="var(--ease-out)";
+        return {...p,cellStyle:{gridColumn:n?"1 / -1":"span 6",transform:n||!(i%2)?"none":"translateY(120px)"},
+        enter:()=>this.setState({hov:p.id}),leave:()=>this.setState({hov:null}),openFilm:()=>this.go("Film",p.id),
+        vidStyle:{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",display:"block",transform:hv?"scale(1.035)":"scale(1)",transition:"transform var(--dur-cinematic) "+ease},
+        gradStyle:{position:"absolute",left:0,right:0,bottom:0,height:"60%",background:"linear-gradient(to top,rgba(11,10,10,.85),rgba(11,10,10,0))",opacity:hv?1:0,transform:hv?"none":"translateY(24px)",transition:"opacity var(--dur-slow) "+ease+",transform var(--dur-slow) "+ease,pointerEvents:"none"},
+        ctaStyle:{position:"absolute",left:20,bottom:18,font:"500 12px/1.2 var(--font-sans)",letterSpacing:"var(--tracking-label)",textTransform:"uppercase",color:"var(--zaya-paper)",opacity:hv?1:0,transform:hv?"none":"translateY(8px)",transition:"opacity var(--dur-slow) "+ease+",transform var(--dur-slow) "+ease,pointerEvents:"none"}};}),
+      loopRef:this.loopRef||(this.loopRef=el=>{if(el){el.muted=true;el.defaultMuted=true;el.setAttribute("muted","");const p=el.play();if(p)p.catch(()=>{});}}),
+      allWorkBtn:{paddingTop:"5px",paddingBottom:0},
+      featGrid:{display:"grid",gridTemplateColumns:n?"minmax(0,1fr)":"minmax(0,11fr) minmax(0,10fr)",gap:n?"var(--space-7)":"calc(var(--grid-gap) + 56px)",alignItems:"center",marginTop:"var(--space-8)"},
+      workPadB:n?"0px":"120px",
+      igRow:{display:"flex",flexDirection:n?"column":"row",justifyContent:"space-between",alignItems:"center",gap:n?"var(--space-7)":"var(--space-9)",maxWidth:"1320px",margin:"0 auto",width:"100%"},
+      menuOpen:!!s.menu,openMenu:()=>this.setState({menu:true}),closeMenu:()=>this.setState({menu:false}),
+      mnavInk:night?"var(--zaya-paper)":"var(--zaya-ink)",mnavBorder:night?"var(--border-inverse)":"var(--border-default)",mLogoTone:night?"paper":"ink",
+      mItems:["Home",...NAV].map(l=>{const on=(page==="Case"?"Case studies":page==="Film"?"Work":page)===l;return {label:l,go:this.link(()=>{this.setState({menu:false});this.go(l);}),style:{display:"block",padding:"18px 0",borderBottom:"1px solid var(--border-inverse)",font:(on?"italic ":"")+"200 44px/1 var(--font-serif)",letterSpacing:"-0.02em",color:on?"var(--accent)":"var(--zaya-paper)",textDecoration:"none"}};}),
+      isFilm:page==="Film",film:PROJECTS.find(x=>x.id===s.caseId)||PROJECTS[0],
+      filmRef:this.filmCb||(this.filmCb=el=>{this.filmEl=el;if(!el)return;el.muted=false;el.currentTime=0;el.play().then(()=>this.setState({filmMuted:false})).catch(()=>{el.muted=true;this.setState({filmMuted:true});el.play().catch(()=>{});});}),
+      filmMuteText:s.filmMuted?"Sound off":"Sound on",filmMuteLabel:s.filmMuted?"Unmute":"Mute",
+      filmToggleMute:()=>{const v=this.filmEl;const m=!s.filmMuted;if(v)v.muted=m;this.setState({filmMuted:m});},
+      filmTogglePlay:()=>{const v=this.filmEl;if(v)v.paused?v.play():v.pause();},
+      goHomeLink:this.link(goto("Home")),
+      featured:feat,
+      distances:[
+        {n:"01",distance:"Up close",craft:"Identity",line:"The mark, the type, the colour of the room it walks into. What people see when they lean in."},
+        {n:"02",distance:"In motion",craft:"Motion design",line:"How it moves and the pace it breathes at, one rhythm from interface to title card."},
+        {n:"03",distance:"At length",craft:"Film & video",line:"The stories it tells when it has your full attention. Shot, cut and graded in-house."},
+        {n:"04",distance:"Every day",craft:"Social content",line:"Small frames, kept consistent. The daily voice that makes a world feel lived in."},
+        {n:"05",distance:"Over years",craft:"Creative direction",line:"The eye that holds it together season after season, long after launch."}],
+      filter:s.filter,setFilter:v=>this.setState({filter:v}),
+      filterItems:cats.map(k=>({value:k,label:k,count:k==="All"?PROJECTS.length:PROJECTS.filter(p=>p.tags.includes(k)).length})),
+      view,setView:v=>this.setState({view:v}),viewItems:[{value:"grid",label:"Frames"},{value:"index",label:"Index"}],
+      isGrid:view==="grid",isIndex:view==="index",
+      workGrid:{display:"grid",gridTemplateColumns:n?"minmax(0,1fr)":"repeat(2,minmax(0,1fr))",gap:"var(--space-8) calc(var(--grid-gap) + 40px)",marginTop:"var(--space-6)"},
+      workList:PROJECTS.filter(p=>p.video&&!p.vertical).map(wtile),
+      workListV:PROJECTS.filter(p=>p.video&&p.vertical).map((p,i)=>wtile(p,i+PROJECTS.filter(q=>q.video&&!q.vertical).length)),
+      workGridV:{display:"grid",gridTemplateColumns:n?"minmax(0,1fr)":"repeat(3,minmax(0,1fr))",gap:"var(--space-8) calc(var(--grid-gap) + 40px)",marginTop:"var(--space-9)"},
+      caseList:PROJECTS.filter(p=>p.id==="block").map((p,i)=>({...this.decorate(p),num:pad(i+1),coverStyle:{position:"relative",aspectRatio:p.id==="block"?"8 / 9":"16 / 9",overflow:"hidden",cursor:"pointer",background:"radial-gradient(50% 55% at 30% 72%,rgba(168,51,102,.3),transparent 70%),linear-gradient(200deg,#302a27,#0b0a0a 72%)"}})),
+      c,next,caseTotal:pad(PROJECTS.length),
+      frameStyles:{a:{margin:0,gridColumn:n?"1 / -1":"1 / span 7"},b:{margin:0,gridColumn:n?"1 / -1":"9 / span 4",marginTop:n?0:160},c:{margin:0,gridColumn:n?"1 / -1":"2 / span 10"}},
+      beliefs:[
+        {n:"01",title:"Atmosphere first.",line:"Before a logo or a frame, we decide how it should feel. Everything else follows the feeling."},
+        {n:"02",title:"One world, not many deliverables.",line:"An identity, a film and a post on Tuesday should look like they came from the same place. Usually they don’t. That is the work."},
+        {n:"03",title:"Fewer, deeper.",line:"We take on a handful of projects each season and stay with them for years."},
+        {n:"04",title:"Craft is the strategy.",line:"Light, pace, type and sound decide what people remember. We sweat all four."}],
+      stages:[
+        {when:"Weeks 1–3",title:"Listen",line:"Conversations, archives, rooms. We learn what the brand already is before deciding what it becomes."},
+        {when:"Weeks 3–6",title:"Find the world",line:"A written treatment and a single reference film. The feeling, agreed before anything is made."},
+        {when:"Weeks 6–16",title:"Make",line:"Identity, motion, film and content built together, by the same small team, in the same light."},
+        {when:"Year one onward",title:"Keep it alive",line:"Direction and new work each season, so the world grows without drifting."}],
+      scopeItems:SCOPES.map(k=>({label:k,on:s.scopes.includes(k),toggle:()=>this.setState(st=>({scopes:st.scopes.includes(k)?st.scopes.filter(x=>x!==k):[...st.scopes,k]}))})),
+      whenOptions:["This winter","Spring 2027","Later in 2027","We’re flexible"],when:s.when,setWhen:v=>this.setState({when:v}),
+      sent:s.sent,notSent:!s.sent,
+      fName:s.fName||"",fEmail:s.fEmail||"",fMsg:s.fMsg||"",
+      setName:e=>this.setState({fName:e.target.value,nameErr:null}),setEmail:e=>this.setState({fEmail:e.target.value,emailErr:null}),setMsg:e=>this.setState({fMsg:e.target.value}),
+      nameErr:s.nameErr||undefined,emailErr:s.emailErr||undefined,sending:!!s.sending,sendLabel:s.sending?"Sending…":"Start a conversation",sendErr:s.sendErr||"",
+      send:()=>this.send()
+    };
+  }
+}
+</script>
+</body>
+</html>

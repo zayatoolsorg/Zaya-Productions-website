@@ -1,0 +1,9 @@
+/* Zaya Productions — element defaults */
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{margin:0;background:var(--surface-page);color:var(--text-primary);font-family:var(--font-body);font-size:var(--type-body);line-height:var(--leading-body);font-weight:var(--weight-sans-regular)}
+::selection{background:var(--selection-bg);color:var(--selection-fg)}
+a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:0.2em;text-decoration-color:var(--border-strong);transition:color var(--dur-fast) var(--ease-out),text-decoration-color var(--dur-fast) var(--ease-out)}
+a:hover{color:var(--accent);text-decoration-color:currentColor}
+:focus-visible{outline:1px solid var(--focus-ring);outline-offset:3px}
+h1,h2,h3{font-family:var(--font-heading);font-weight:var(--weight-serif-heading);letter-spacing:var(--tracking-heading);line-height:var(--leading-heading);margin:0;text-wrap:balance}
+p{margin:0;text-wrap:pretty}

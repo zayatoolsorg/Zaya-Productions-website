@@ -1,0 +1,16 @@
+/* Zaya Productions — typography */
+:root{
+--font-serif:"ZT Bros Oskon 90s","Cormorant Garamond",Georgia,serif;
+--font-sans:"Founders Grotesk","Helvetica Neue",Helvetica,Arial,sans-serif;
+--weight-serif-display:200;--weight-serif-heading:300;--weight-serif-text:400;
+--weight-sans-light:300;--weight-sans-regular:400;--weight-sans-medium:500;--weight-sans-semibold:600;
+/* serif display scale */
+--type-display-xl:clamp(88px,11vw,176px);--type-display-l:clamp(64px,8vw,120px);--type-display-m:clamp(48px,5.6vw,84px);--type-display-s:clamp(36px,4vw,56px);
+--type-heading-l:40px;--type-heading-m:30px;--type-heading-s:24px;
+/* sans scale (Founders runs small — sizes are set a notch larger than usual) */
+--type-lead:24px;--type-body-l:20px;--type-body:17px;--type-small:15px;--type-caption:13px;--type-label:12px;
+--leading-display:0.92;--leading-heading:1.08;--leading-lead:1.32;--leading-body:1.5;--leading-tight:1.15;
+--tracking-display:-0.025em;--tracking-heading:-0.015em;--tracking-body:0;--tracking-label:0.16em;--tracking-nav:0.04em;
+/* semantic */
+--font-display:var(--font-serif);--font-heading:var(--font-serif);--font-body:var(--font-sans);--font-ui:var(--font-sans);
+}

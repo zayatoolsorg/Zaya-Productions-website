@@ -1,0 +1,16 @@
+/* Zaya Productions — spacing, layout, radius, elevation */
+:root{
+--space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;--space-9:96px;--space-10:128px;--space-11:192px;--space-12:256px;
+--gutter:clamp(20px,3.2vw,48px); /* @kind spacing */
+--section-y:clamp(96px,14vw,224px); /* @kind spacing */
+--max-width:1600px;--measure:34em;
+--grid-columns:12; /* @kind other */
+--grid-gap:var(--space-5);
+--radius-none:0;--radius-hair:2px;--radius-round:999px;
+--nav-height:72px;
+--shadow-none:none;--shadow-lift:0 30px 60px -30px rgba(14,13,12,0.28);--shadow-overlay:0 40px 120px -40px rgba(14,13,12,0.45);
+--glow-accent:radial-gradient(60% 60% at 50% 40%,var(--zaya-magenta-glow),transparent 70%);
+--wash-paper:radial-gradient(120% 80% at 80% 0%,#FBFAF8 0%,var(--zaya-paper) 55%,var(--zaya-paper-2) 100%);
+--grain-url:url("../assets/grain.png"); /* @kind other */
+--grain-opacity:0.06; /* @kind other */
+}

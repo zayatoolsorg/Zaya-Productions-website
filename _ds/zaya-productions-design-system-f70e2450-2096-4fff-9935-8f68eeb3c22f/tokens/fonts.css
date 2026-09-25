@@ -1,0 +1,13 @@
+/* Zaya Productions — webfonts. Serif: ZT Bros Oskon 90s. Sans: Founders Grotesk. */
+@font-face{font-family:"Founders Grotesk";src:url("../fonts/FoundersGrotesk-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Founders Grotesk";src:url("../fonts/FoundersGrotesk-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Founders Grotesk";src:url("../fonts/FoundersGrotesk-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Founders Grotesk";src:url("../fonts/FoundersGrotesk-Semibold.otf") format("opentype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Founders Grotesk";src:url("../fonts/FoundersGrotesk-SemiboldItalic.otf") format("opentype");font-weight:600;font-style:italic;font-display:swap}
+@font-face{font-family:"Founders Grotesk";src:url("../fonts/FoundersGrotesk-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"ZT Bros Oskon 90s";src:url("../fonts/ZTBrosOskon90s-ExtraLight.otf") format("opentype");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"ZT Bros Oskon 90s";src:url("../fonts/ZTBrosOskon90s-ExtraLightItalic.otf") format("opentype");font-weight:200;font-style:italic;font-display:swap}
+@font-face{font-family:"ZT Bros Oskon 90s";src:url("../fonts/ZTBrosOskon90s-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"ZT Bros Oskon 90s";src:url("../fonts/ZTBrosOskon90s-LightItalic.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"ZT Bros Oskon 90s";src:url("../fonts/ZTBrosOskon90s-Regular.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"ZT Bros Oskon 90s";src:url("../fonts/ZTBrosOskon90s-Italic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap}
