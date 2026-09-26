@@ -257,7 +257,7 @@
                 <div onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:16 / 9;overflow:hidden;background:var(--zaya-night-2);">
                   <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
                   <div onClick="{{ p.toggle }}" style="{{ p.tintStyle }}">
-                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶</span></x-import>
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">►</span></x-import>
                   </div>
                   <button onClick="{{ p.toggleMute }}" aria-label="{{ p.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ p.muteText }}</button>
                 </div>
@@ -278,7 +278,7 @@
                 <div onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:9 / 16;overflow:hidden;background:var(--zaya-night-2);">
                   <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
                   <div onClick="{{ p.toggle }}" style="{{ p.tintStyle }}">
-                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶</span></x-import>
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">►</span></x-import>
                   </div>
                   <button onClick="{{ p.toggleMute }}" aria-label="{{ p.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ p.muteText }}</button>
                 </div>
@@ -639,7 +639,7 @@ class Component extends DCLogic {
     const goto=p=>()=>this.go(p);
     return {
       reelRef:this.reelRef||(this.reelRef=React.createRef()),
-      reelIcon:this.state.reelPlaying?"❚❚":"▶",
+      reelIcon:this.state.reelPlaying?"❚❚":"►",
       reelLabel:this.state.reelPlaying?"Pause reel":"Play reel",
       reelEnded:()=>this.setState({reelPlaying:false}),
       reelEnter:()=>this.setState({reelHov:true}),reelLeave:()=>this.setState({reelHov:false}),
@@ -714,6 +714,25 @@ class Component extends DCLogic {
     };
   }
 }
+</script>
+<script>
+  (function () {
+    function prep(v) {
+      v.muted = true;
+      v.defaultMuted = true;
+      v.setAttribute('muted', '');
+      v.setAttribute('playsinline', '');
+      v.setAttribute('webkit-playsinline', '');
+      v.setAttribute('autoplay', '');
+      v.setAttribute('loop', '');
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    }
+    function run() { document.querySelectorAll('video').forEach(prep); }
+    document.addEventListener('DOMContentLoaded', run);
+    window.addEventListener('load', run);
+    new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
+  })();
 </script>
 </body>
 </html>
