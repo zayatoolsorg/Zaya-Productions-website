@@ -105,6 +105,7 @@
       [data-m="igrow2"]{flex-direction:column-reverse !important;}
     }
   </style>
+  <style>div:fullscreen{background:#000 !important;} div:-webkit-full-screen{background:#000 !important;} div:fullscreen > video{object-fit:contain !important;} div:-webkit-full-screen > video{object-fit:contain !important;}</style>
   <template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#0B0A0A"></rect><text x="50" y="64" text-anchor="middle" font-family="Georgia,serif" font-size="44" font-style="italic" fill="#A83366">Z</text></svg></template>
 </helmet>
 <div style="min-height:100vh;background:var(--surface-page);color:var(--text-primary);font:400 17px/1.5 var(--font-sans);">
@@ -255,11 +256,12 @@
             <sc-for list="{{ workList }}" as="p" hint-placeholder-count="4">
               <article style="display:flex;flex-direction:column;gap:18px;">
                 <div onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:16 / 9;overflow:hidden;background:var(--zaya-night-2);">
-                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
+                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" onPlay="{{ p.onPlay }}" onPause="{{ p.onPause }}" onVolumeChange="{{ p.onVol }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
                   <div onClick="{{ p.toggle }}" style="{{ p.tintStyle }}">
-                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">►</span></x-import>
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶</span></x-import>
                   </div>
                   <button onClick="{{ p.toggleMute }}" aria-label="{{ p.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ p.muteText }}</button>
+                  <button onClick="{{ p.toggleFs }}" aria-label="Fullscreen" style="position:absolute;left:16px;bottom:14px;width:31px;height:31px;padding:0;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);cursor:pointer;border-radius:0;display:flex;align-items:center;justify-content:center;" style-hover="border-color:var(--accent);"><span style="position:relative;display:block;width:13px;height:13px;"><span style="position:absolute;left:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span><span style="position:absolute;left:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span></span></button>
                 </div>
                 <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:baseline;">
                   <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ p.num }})</span>
@@ -276,11 +278,12 @@
             <sc-for list="{{ workListV }}" as="p" hint-placeholder-count="3">
               <article style="display:flex;flex-direction:column;gap:18px;">
                 <div onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:9 / 16;overflow:hidden;background:var(--zaya-night-2);">
-                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
+                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" onPlay="{{ p.onPlay }}" onPause="{{ p.onPause }}" onVolumeChange="{{ p.onVol }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
                   <div onClick="{{ p.toggle }}" style="{{ p.tintStyle }}">
-                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">►</span></x-import>
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶</span></x-import>
                   </div>
                   <button onClick="{{ p.toggleMute }}" aria-label="{{ p.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ p.muteText }}</button>
+                  <button onClick="{{ p.toggleFs }}" aria-label="Fullscreen" style="position:absolute;left:16px;bottom:14px;width:31px;height:31px;padding:0;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);cursor:pointer;border-radius:0;display:flex;align-items:center;justify-content:center;" style-hover="border-color:var(--accent);"><span style="position:relative;display:block;width:13px;height:13px;"><span style="position:absolute;left:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span><span style="position:absolute;left:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span></span></button>
                 </div>
                 <div style="display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:baseline;">
                   <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ p.num }})</span>
@@ -628,8 +631,11 @@ class Component extends DCLogic {
     const ci=PROJECTS.findIndex(p=>p.id===c.id);const next=this.decorate(PROJECTS[(ci+1)%PROJECTS.length]);
     const wtile=(p,i)=>{const vr=this.wrefs[p.id]||(this.wrefs[p.id]=React.createRef());const m=!!(s.wm||{})[p.id],playing=s.wp===p.id,hv=s.whov===p.id;
         return {...this.decorate(p),num:pad(i+1),vref:vr,muted:m,muteText:m?"Sound off":"Sound on",muteLabel:m?"Unmute":"Mute",
-        tintStyle:{position:"absolute",inset:0,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",background:"rgba(11,10,10,.45)",opacity:!playing&&hv?1:0,pointerEvents:playing?"none":"auto",transition:"opacity var(--dur-slow) var(--ease-out)"},
+        tintStyle:{position:"absolute",inset:0,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",background:"rgba(11,10,10,.45)",opacity:!playing&&(hv||n)?1:0,pointerEvents:playing?"none":"auto",transition:"opacity var(--dur-slow) var(--ease-out)"},
         enter:()=>this.setState({whov:p.id}),leave:()=>this.setState({whov:null}),ended:()=>this.setState({wp:null}),
+        onPlay:()=>{if(this.state.wp!==p.id)this.setState({wp:p.id});},onPause:()=>{if(this.state.wp===p.id)this.setState({wp:null});},
+        onVol:()=>{const v=vr.current;if(v&&!!(this.state.wm||{})[p.id]!==v.muted)this.setState({wm:{...(this.state.wm||{}),[p.id]:v.muted}});},
+        toggleFs:()=>{const v=vr.current;if(!v)return;const box=v.parentElement,d=document;const cur=d.fullscreenElement||d.webkitFullscreenElement;if(cur){(d.exitFullscreen||d.webkitExitFullscreen).call(d);return;}const solo=()=>{Object.values(this.wrefs).forEach(r=>{if(r.current&&r.current!==v)r.current.pause();});v.muted=m;v.play();};const req=box.requestFullscreen||box.webkitRequestFullscreen;if(req&&(d.fullscreenEnabled||d.webkitFullscreenEnabled)){req.call(box);if(v.paused)solo();}else if(v.webkitEnterFullscreen){solo();v.webkitEnterFullscreen();}},
         toggleMute:()=>{const v=vr.current;if(v)v.muted=!m;this.setState({wm:{...(s.wm||{}),[p.id]:!m}});},
         toggle:()=>{const v=vr.current;if(!v)return;if(v.paused){Object.values(this.wrefs).forEach(r=>{if(r.current&&r.current!==v)r.current.pause();});v.muted=m;v.play();this.setState({wp:p.id});}else{v.pause();this.setState({wp:null});}}};};
     const feat=this.decorate(PROJECTS.find(p=>p.id==="block")||PROJECTS[0]);
@@ -639,7 +645,7 @@ class Component extends DCLogic {
     const goto=p=>()=>this.go(p);
     return {
       reelRef:this.reelRef||(this.reelRef=React.createRef()),
-      reelIcon:this.state.reelPlaying?"❚❚":"►",
+      reelIcon:this.state.reelPlaying?"❚❚":"▶",
       reelLabel:this.state.reelPlaying?"Pause reel":"Play reel",
       reelEnded:()=>this.setState({reelPlaying:false}),
       reelEnter:()=>this.setState({reelHov:true}),reelLeave:()=>this.setState({reelHov:false}),
@@ -714,25 +720,6 @@ class Component extends DCLogic {
     };
   }
 }
-</script>
-<script>
-  (function () {
-    function prep(v) {
-      v.muted = true;
-      v.defaultMuted = true;
-      v.setAttribute('muted', '');
-      v.setAttribute('playsinline', '');
-      v.setAttribute('webkit-playsinline', '');
-      v.setAttribute('autoplay', '');
-      v.setAttribute('loop', '');
-      var p = v.play();
-      if (p && p.catch) p.catch(function () {});
-    }
-    function run() { document.querySelectorAll('video').forEach(prep); }
-    document.addEventListener('DOMContentLoaded', run);
-    window.addEventListener('load', run);
-    new MutationObserver(run).observe(document.documentElement, { childList: true, subtree: true });
-  })();
 </script>
 </body>
 </html>
