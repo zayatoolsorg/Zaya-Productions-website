@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+<base href="/">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
+<script src="/support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-  <title>Zaya Productions · A creative house</title>
+  <title>Zaya Productions</title>
   <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/fonts.css">
   <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/colors.css">
   <link rel="stylesheet" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/tokens/typography.css">
@@ -57,7 +58,7 @@
       [data-m="cshero"] > div:first-child{margin-bottom:var(--space-7) !important;}
       main[data-screen-label="02 Work"] h1{font-size:clamp(48px,14vw,64px) !important;line-height:1 !important;}
       [data-m="mhide"]{display:none !important;}
-      [data-m="csbrief"]{font-size:21px !important;line-height:1.3 !important;}
+      [data-m="csbrief"]{font-size:24px !important;line-height:1.3 !important;}
       [data-m="csidea"]{font-size:30px !important;line-height:1.1 !important;}
       [data-m="csbody"]{font-size:15px !important;line-height:1.55 !important;}
       [data-m="csh3"]{font-size:26px !important;line-height:1.1 !important;}
@@ -105,6 +106,11 @@
       [data-m="igrow2"]{flex-direction:column-reverse !important;}
     }
   </style>
+  <meta name="ext-resource-dependency" content="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/assets/logotype-black.png">
+  <meta name="ext-resource-dependency" content="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/assets/logotype-white.png">
+  <meta name="ext-resource-dependency" content="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/assets/mark-black.png">
+  <meta name="ext-resource-dependency" content="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/assets/mark-white.png">
+  <meta name="ext-resource-dependency" content="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/assets/mark-magenta.png">
   <style>div:fullscreen{background:#000 !important;} div:-webkit-full-screen{background:#000 !important;} div:fullscreen > video{object-fit:contain !important;} div:-webkit-full-screen > video{object-fit:contain !important;}</style>
   <link rel="icon" type="image/png" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/assets/mark-magenta.png">
   <link rel="apple-touch-icon" href="_ds/zaya-productions-design-system-f70e2450-2096-4fff-9935-8f68eeb3c22f/assets/mark-magenta.png">
@@ -258,9 +264,9 @@
             <sc-for list="{{ workList }}" as="p" hint-placeholder-count="4">
               <article style="display:flex;flex-direction:column;gap:18px;">
                 <div onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:16 / 9;overflow:hidden;background:var(--zaya-night-2);">
-                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" onPlay="{{ p.onPlay }}" onPause="{{ p.onPause }}" onVolumeChange="{{ p.onVol }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
+                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" onPlay="{{ p.onPlay }}" onPause="{{ p.onPause }}" onVolumeChange="{{ p.onVol }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale({{ p.vidScale }});display:block;cursor:pointer;"></video>
                   <div onClick="{{ p.toggle }}" style="{{ p.tintStyle }}">
-                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶</span></x-import>
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶︎</span></x-import>
                   </div>
                   <button onClick="{{ p.toggleMute }}" aria-label="{{ p.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ p.muteText }}</button>
                   <button onClick="{{ p.toggleFs }}" aria-label="Fullscreen" style="position:absolute;left:16px;bottom:14px;width:31px;height:31px;padding:0;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);cursor:pointer;border-radius:0;display:flex;align-items:center;justify-content:center;" style-hover="border-color:var(--accent);"><span style="position:relative;display:block;width:13px;height:13px;"><span style="position:absolute;left:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span><span style="position:absolute;left:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span></span></button>
@@ -280,9 +286,9 @@
             <sc-for list="{{ workListV }}" as="p" hint-placeholder-count="3">
               <article style="display:flex;flex-direction:column;gap:18px;">
                 <div onMouseEnter="{{ p.enter }}" onMouseLeave="{{ p.leave }}" style="position:relative;aspect-ratio:9 / 16;overflow:hidden;background:var(--zaya-night-2);">
-                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" onPlay="{{ p.onPlay }}" onPause="{{ p.onPause }}" onVolumeChange="{{ p.onVol }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;cursor:pointer;"></video>
+                  <video ref="{{ p.vref }}" src="{{ p.video }}" poster="{{ p.image }}" onClick="{{ p.toggle }}" onEnded="{{ p.ended }}" onPlay="{{ p.onPlay }}" onPause="{{ p.onPause }}" onVolumeChange="{{ p.onVol }}" muted="{{ p.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale({{ p.vidScale }});display:block;cursor:pointer;"></video>
                   <div onClick="{{ p.toggle }}" style="{{ p.tintStyle }}">
-                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶</span></x-import>
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ p.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶︎</span></x-import>
                   </div>
                   <button onClick="{{ p.toggleMute }}" aria-label="{{ p.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ p.muteText }}</button>
                   <button onClick="{{ p.toggleFs }}" aria-label="Fullscreen" style="position:absolute;left:16px;bottom:14px;width:31px;height:31px;padding:0;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);cursor:pointer;border-radius:0;display:flex;align-items:center;justify-content:center;" style-hover="border-color:var(--accent);"><span style="position:relative;display:block;width:13px;height:13px;"><span style="position:absolute;left:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span><span style="position:absolute;left:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span></span></button>
@@ -324,7 +330,7 @@
             <div style="{{ featGrid }}">
               <div onClick="{{ c.open }}" style="{{ c.coverStyle }}">
                 <sc-if value="{{ c.image }}" hint-placeholder-val="{{ false }}">
-                  <img src="{{ c.image }}" alt="{{ c.title }} cover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top;display:block;">
+                  <img src="{{ c.image }}" alt="{{ c.title }} cover" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:{{ c.coverPos }};transform:scale({{ c.coverScale }});display:block;">
                 </sc-if>
               </div>
               <div style="display:flex;flex-direction:column;gap:var(--space-7);max-width:34em;">
@@ -341,10 +347,6 @@
             </div>
           </article>
         </sc-for>
-        <article data-m="csart" style="display:flex;flex-direction:column;gap:var(--space-7);padding:var(--space-9) 0;border-top:1px solid var(--zaya-ink);">
-          <div style="display:flex;align-items:baseline;gap:16px;font:500 12px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;"><span style="color:var(--accent);">(02)</span></div>
-          <h2 style="margin:0;font:200 clamp(56px,6.4vw,112px)/0.95 var(--font-serif);letter-spacing:var(--tracking-display);color:var(--text-muted);">Coming <i>soon.</i></h2>
-        </article>
       </section>
     </main>
   </sc-if>
@@ -378,30 +380,33 @@
         <section data-m="cshero" style="padding:var(--space-9) var(--gutter) var(--space-8);color:var(--zaya-paper);">
           <div style="display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-inverse-muted);margin-bottom:var(--space-9);">
             <a href="#" onClick="{{ goCasesLink }}" style="color:var(--zaya-paper);" style-hover="color:var(--accent);">← All case studies</a>
-            <span>Case study (01)</span>
+            <span>Case study ({{ caseNum }})</span>
           </div>
           <h1 style="font:200 var(--type-display-xl)/0.9 var(--font-serif);letter-spacing:var(--tracking-display);margin:0;max-width:10em;">{{ c.title }}</h1>
           <div style="display:flex;flex-wrap:wrap;gap:var(--space-8);justify-content:space-between;align-items:flex-end;margin-top:var(--space-8);">
             <p data-m="cssub" style="flex:1 1 360px;max-width:26em;margin:0;font:300 var(--type-lead)/var(--leading-lead) var(--font-sans);text-wrap:pretty;">{{ c.logline }}</p>
-            <div data-m="mhide" style="flex:0 1 460px;display:flex;flex-direction:column;gap:10px;"><span style="font:300 var(--type-heading-m)/1.1 var(--font-serif);text-align:right;">Dubai</span></div>
+            <div data-m="mhide" style="flex:0 1 460px;display:flex;flex-direction:column;gap:10px;"><span style="font:300 var(--type-heading-m)/1.1 var(--font-serif);text-align:right;">{{ c.location }}</span></div>
         </div>
       </section>
     </x-import>
       <section style="padding:var(--section-y) var(--gutter) 0;">
         <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 1 }}" aside="{{ c.client }}" hint-size="100%,30px">The brief</x-import>
-        <p data-m="csbrief" style="margin:var(--space-8) 0 0 auto;max-width:24em;font:300 clamp(26px,2.6vw,40px)/1.22 var(--font-serif);letter-spacing:-0.015em;text-wrap:pretty;">{{ c.brief }}</p>
+        <p data-m="csbrief" style="margin:var(--space-8) auto 0;max-width:none;text-align:center;font:300 clamp(30px,3vw,46px)/1.22 var(--font-serif);letter-spacing:-0.015em;text-wrap:pretty;">{{ c.brief }}</p>
       </section>
+      <sc-if value="{{ isBlock }}" hint-placeholder-val="{{ true }}">
       <section style="padding:var(--section-y) var(--gutter) 0;">
         <figure style="margin:0;">
           <img src="assets/block/homepage.png" alt="Block Agency homepage" style="box-sizing:border-box;width:100%;height:auto;display:block;border:1px solid var(--border-default);">
           <figcaption style="margin-top:14px;font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">(i) Homepage, blockagency.io</figcaption>
         </figure>
       </section>
+      </sc-if>
       <section style="padding:var(--section-y) var(--gutter) 0;">
         <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 2 }}" hint-size="100%,30px">The idea</x-import>
         <p data-m="csidea" style="margin:var(--space-8) 0 0;max-width:16em;font:200 clamp(40px,5vw,80px)/1.02 var(--font-serif);letter-spacing:-0.02em;text-wrap:balance;">{{ c.ideaA }} <i style="color:var(--accent);">{{ c.ideaEm }}</i>{{ c.ideaB }}</p>
         <p data-m="csbody" style="margin:var(--space-8) 0 0 auto;max-width:34em;color:var(--text-secondary);font-size:18px;text-wrap:pretty;">{{ c.approach }}</p>
       </section>
+      <sc-if value="{{ isBlock }}" hint-placeholder-val="{{ true }}">
       <section style="padding:var(--section-y) var(--gutter) 0;">
         <figure style="margin:0;background:var(--zaya-night);padding:clamp(20px,4vw,64px);">
           <img src="assets/block/website-screens.png" alt="Block Agency website pages in Figma" style="width:100%;height:auto;display:block;">
@@ -429,8 +434,52 @@
           </div>
         </div>
       </section>
+      </sc-if>
+      <sc-if value="{{ isAhankar }}" hint-placeholder-val="{{ false }}">
       <section style="padding:var(--section-y) var(--gutter) 0;">
-        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 4 }}" hint-size="100%,30px">What we made</x-import>
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 3 }}" aside="@ahankarwear" hint-size="100%,30px">The reels</x-import>
+        <div style="display:flex;flex-direction:column;gap:var(--section-y);margin-top:var(--space-8);">
+          <sc-for list="{{ ahReels }}" as="r" hint-placeholder-count="4">
+            <sc-if value="{{ r.sideA }}" hint-placeholder-val="{{ true }}">
+            <div style="{{ igRow }}">
+            <div style="flex:0 1 32em;display:flex;flex-direction:column;gap:var(--space-6);max-width:32em;">
+              <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ r.num }}) {{ r.title }}</span>
+              <h3 data-m="csh3" style="margin:0;font:300 clamp(32px,3.4vw,52px)/1.05 var(--font-serif);letter-spacing:-0.02em;text-wrap:balance;">{{ r.headA }}<i style="color:var(--accent);">{{ r.headEm }}</i></h3>
+              <p data-m="csbody" style="margin:0;color:var(--text-secondary);font-size:18px;text-wrap:pretty;">{{ r.line }}</p>
+            </div>
+            <figure style="margin:0;flex:0 1 460px;width:100%;max-width:460px;"><div onMouseEnter="{{ r.enter }}" onMouseLeave="{{ r.leave }}" style="position:relative;aspect-ratio:9 / 16;overflow:hidden;background:var(--zaya-night-2);">
+                  <video ref="{{ r.vref }}" src="{{ r.video }}" poster="{{ r.image }}" onClick="{{ r.toggle }}" onEnded="{{ r.ended }}" onPlay="{{ r.onPlay }}" onPause="{{ r.onPause }}" onVolumeChange="{{ r.onVol }}" muted="{{ r.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale({{ r.vidScale }});display:block;cursor:pointer;"></video>
+                  <div onClick="{{ r.toggle }}" style="{{ r.tintStyle }}">
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ r.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶︎</span></x-import>
+                  </div>
+                  <button onClick="{{ r.toggleMute }}" aria-label="{{ r.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ r.muteText }}</button>
+                  <button onClick="{{ r.toggleFs }}" aria-label="Fullscreen" style="position:absolute;left:16px;bottom:14px;width:31px;height:31px;padding:0;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);cursor:pointer;border-radius:0;display:flex;align-items:center;justify-content:center;" style-hover="border-color:var(--accent);"><span style="position:relative;display:block;width:13px;height:13px;"><span style="position:absolute;left:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span><span style="position:absolute;left:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span></span></button>
+                </div></figure>
+            </div>
+            </sc-if>
+            <sc-if value="{{ r.sideB }}" hint-placeholder-val="{{ false }}">
+            <div data-m="igrow2" style="{{ igRow }}">
+            <figure style="margin:0;flex:0 1 460px;width:100%;max-width:460px;"><div onMouseEnter="{{ r.enter }}" onMouseLeave="{{ r.leave }}" style="position:relative;aspect-ratio:9 / 16;overflow:hidden;background:var(--zaya-night-2);">
+                  <video ref="{{ r.vref }}" src="{{ r.video }}" poster="{{ r.image }}" onClick="{{ r.toggle }}" onEnded="{{ r.ended }}" onPlay="{{ r.onPlay }}" onPause="{{ r.onPause }}" onVolumeChange="{{ r.onVol }}" muted="{{ r.muted }}" playsInline="{{ true }}" preload="metadata" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale({{ r.vidScale }});display:block;cursor:pointer;"></video>
+                  <div onClick="{{ r.toggle }}" style="{{ r.tintStyle }}">
+                    <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.IconButton" label="Play {{ r.title }}" tone="night" size="{{ 56 }}" hint-size="56px,56px"><span style="display:inline-block;line-height:1;transform:translate(1px,0.5px);">▶︎</span></x-import>
+                  </div>
+                  <button onClick="{{ r.toggleMute }}" aria-label="{{ r.muteLabel }}" style="position:absolute;right:16px;bottom:14px;padding:11px 12px 7px;line-height:1;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);color:var(--zaya-paper);font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;cursor:pointer;border-radius:0;" style-hover="border-color:var(--accent);">{{ r.muteText }}</button>
+                  <button onClick="{{ r.toggleFs }}" aria-label="Fullscreen" style="position:absolute;left:16px;bottom:14px;width:31px;height:31px;padding:0;border:1px solid rgba(246,244,241,.4);background:rgba(11,10,10,.45);cursor:pointer;border-radius:0;display:flex;align-items:center;justify-content:center;" style-hover="border-color:var(--accent);"><span style="position:relative;display:block;width:13px;height:13px;"><span style="position:absolute;left:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;top:0;width:4px;height:4px;border-top:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span><span style="position:absolute;left:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-left:1px solid var(--zaya-paper);"></span><span style="position:absolute;right:0;bottom:0;width:4px;height:4px;border-bottom:1px solid var(--zaya-paper);border-right:1px solid var(--zaya-paper);"></span></span></button>
+                </div></figure>
+            <div style="flex:0 1 32em;display:flex;flex-direction:column;gap:var(--space-6);max-width:32em;">
+              <span style="font:500 11px/1.2 var(--font-sans);letter-spacing:var(--tracking-label);text-transform:uppercase;color:var(--text-muted);">({{ r.num }}) {{ r.title }}</span>
+              <h3 data-m="csh3" style="margin:0;font:300 clamp(32px,3.4vw,52px)/1.05 var(--font-serif);letter-spacing:-0.02em;text-wrap:balance;">{{ r.headA }}<i style="color:var(--accent);">{{ r.headEm }}</i></h3>
+              <p data-m="csbody" style="margin:0;color:var(--text-secondary);font-size:18px;text-wrap:pretty;">{{ r.line }}</p>
+            </div>
+            </div>
+            </sc-if>
+          </sc-for>
+        </div>
+      </section>
+      </sc-if>
+      <section style="padding:var(--section-y) var(--gutter) 0;">
+        <x-import component-from-global-scope="ZayaProductionsDesignSystem_f70e24.SectionLabel" index="{{ 4 }}" hint-size="100%,30px"><span style="display:inline-flex;align-items:baseline;gap:8px;">What we made<sc-if value="{{ isAhankar }}" hint-placeholder-val="{{ false }}"><a href="https://www.instagram.com/ahankarwear/" target="_blank" rel="noopener" aria-label="Ahankarwear on Instagram" style="color:var(--accent);text-decoration:none;font:700 20px/1 var(--font-sans);position:relative;top:2px;" style-hover="color:var(--zaya-ink);">↗</a></sc-if></span></x-import>
         <div style="display:flex;flex-direction:column;border-top:1px solid var(--border-default);margin-top:var(--space-8);">
           <sc-for list="{{ c.surfaces }}" as="s" hint-placeholder-count="4">
             <div data-m="csrow" style="display:grid;grid-template-columns:minmax(56px,1fr) minmax(0,4fr) minmax(0,6fr);gap:var(--grid-gap);align-items:baseline;padding:28px 0;border-bottom:1px solid var(--border-default);">
@@ -594,21 +643,52 @@ credits:[["Brand identity","Zaya"],["Brand guidelines","Zaya"],["Website design"
 frames:["The wordmark, burnt orange on matte black","Homepage, the world's streets as a stage","Social system, campaign breakdown"]},
 {id:"naga",vertical:true,title:"Naga",client:"Ahankarwear",discipline:"Social",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Naga%20export%20v3.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/ahankar%20naga.png",tags:["Social"],scope:"Social",year:"2025",aspect:"9 / 16",location:"India",runtime:"",case:false,logline:"",brief:"",surfaces:[],credits:[],frames:["","",""]},
 {id:"bsc",vertical:true,title:"Showcase",client:"Bombay Shaving Company",discipline:"Social",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/BSC.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/BSC.png",tags:["Social"],scope:"Social",year:"2025",aspect:"9 / 16",location:"India",runtime:"",case:false,logline:"",brief:"",surfaces:[],credits:[],frames:["","",""]},
-{id:"blockteaser",vertical:true,title:"Brand Film",client:"Block Agency",discipline:"Social",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Block%20Agency%20Brand%20Teaser%20Alternate%20version%20v2.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/Block%20agency%20brand%20film%20thumbnail.png",tags:["Social"],scope:"Social",year:"2025",aspect:"9 / 16",location:"India",runtime:"",case:false,logline:"",brief:"",surfaces:[],credits:[],frames:["","",""]}];
+{id:"blockteaser",vertical:true,title:"Brand Film",client:"Block Agency",discipline:"Social",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Block%20Agency%20Brand%20Teaser%20Alternate%20version%20v2.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/Block%20agency%20brand%20film%20thumbnail.png",tags:["Social"],scope:"Social",year:"2025",aspect:"9 / 16",location:"India",runtime:"",case:false,logline:"",brief:"",surfaces:[],credits:[],frames:["","",""]},
+{id:"ahankar",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/Ahankarwear%20case%20study%20cover.png",coverPos:"center",coverScale:1.12,title:"Ahankarwear",client:"Ahankarwear",discipline:"Social",tags:[],scope:"Short-form film · Social",year:"2025",aspect:"9 / 16",location:"India",runtime:"",case:true,
+logline:"Short-form reels for an Indian streetwear label that wears its heritage loud.",
+brief:"Ahankar makes streetwear in India, for India: graphic tees where myth, craft and history meet the street. Every drop is built around one story, from Shiva’s serpent to the jets that guard Indian skies. The brief was to make those stories land on Instagram in the first second, for an audience that scrolls fast and knows its culture well.",
+ideaA:"Every shirt carries a legend. The reel had to",ideaEm:"tell it",ideaB:" before the thumb moves.",
+approach:"We read the brief as a culture problem, not a product one. This audience doesn’t need to be sold a T-shirt; it needs a reason to believe in what’s printed on it. So each reel opens on the story behind the design and lets the shirt arrive last, as the payoff. Sound does as much work as picture, setting the mood before a single word is read.",
+surfaces:[["Reels","Four short-form films for Instagram, one for each drop: Naga, Vimaana, Baagh and Kalamkaari."],["Story","A narrative for every shirt, written from its myth or history before a single frame was made."],["Sound","Sound design and mix for each reel, used to build mood and tension ahead of the product."],["AI production","An AI-assisted pipeline for Kalamkaari, with every motif checked and corrected by hand."]],
+quote:"Made in Bharat, for the culture.",quoteBy:"Ahankar",
+credits:[["Direction","Zaya"],["Edit and sound","Zaya"]],frames:["","",""]}];
 const PAT=[{c:"1 / span 7",m:0},{c:"9 / span 4",m:160},{c:"2 / span 5",m:0},{c:"8 / span 5",m:96},{c:"1 / span 6",m:40},{c:"8 / span 5",m:160}];
 const NAV=["Work","Case studies","Contact"];
 const pad=n=>String(n).padStart(2,"0");
 const SCOPES=["Identity","Motion","Film","Social","Creative direction","Not sure yet"];
+const SLUGS={block:"block-agency",ahankar:"ahankarwear"};
+const CASE_IDS=["block","ahankar"];
+const AH_REELS=[
+{id:"ah-naga",title:"Naga",label:"The serpent",head:"The serpent at <i>Shiva’s throat.</i>",headA:"The serpent at ",headEm:"Shiva’s throat.",line:"Naga draws on Vasuki, the serpent coiled around Shiva’s neck: stillness and danger held in the same body. We cut it as a slow reveal, holding the shirt back until the myth has done its work, so the design lands as something sacred rather than something for sale.",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Naga%20export%20v3.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/ahankar%20naga.png"},
+{id:"ah-vimaana",vidScale:1.12,title:"Vimaana",label:"Heritage and firepower",headA:"Ancient flight, ",headEm:"modern firepower.",line:"Vimaana are the flying machines of Indian epics. The shirt pairs them with the fighter jets that fly for India today, each drawn as an animal. The reel plays like a squadron roll call: every jet named on screen, matched to its creature, with the armed forces running through it so myth and machine read as one lineage.",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Vimaana%20IG.mp4#t=0.1",image:""},
+{id:"ah-baagh",title:"Baagh",label:"The tiger",headA:"Fear, turned into ",headEm:"power.",line:"Baagh is the Indian tiger, kept dark and mostly unseen. Low light, heavy breath and a sound design built to unsettle do the first half of the work. Then the turn: the same power, pointed somewhere better. The shirt carries that message, strength with direction.",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Ahankarwear%20baagh.mp4#t=0.1",image:""},
+{id:"ah-kalamkaari",title:"Kalamkaari",label:"The craft",headA:"An ancient art, made ",headEm:"with AI.",line:"Kalamkaari is centuries-old hand-painted textile art, and this shirt is an ode to it. The reel was made quickly with AI, then slowly by hand: motifs, line work and colour corrected frame by frame until the detail held up for people who grew up with the real thing. In Indian craft the detail is the point, and AI only gets it right when someone is watching.",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Ahankarwear%20Kalamkaari.mp4#t=0.1",image:""}
+].map(r=>({...r,client:"Ahankarwear",discipline:"Reel",tags:[],surfaces:[],credits:[],frames:["","",""]}));
 class Component extends DCLogic {
   state={page:"Home",caseId:"quiet",filter:"All",view:null,sent:false,scopes:[],when:"",w:1200,lis:"",lon:""};
   componentDidMount(){
-    try{const q=new URLSearchParams(location.search);if(q.get("page")){this.setState({page:q.get("page"),caseId:q.get("case")||"block"});}else{const s=JSON.parse(localStorage.getItem("zaya-site")||"{}");if(s.page&&s.page!=="About")this.setState({page:s.page,caseId:s.caseId||"quiet"});}}catch(e){}
+    this.kick=()=>{(this.loops||[]).forEach(v=>{if(v.isConnected&&v.paused){v.muted=true;const p=v.play();if(p)p.catch(()=>{});}});};
+    ["touchstart","scroll","click"].forEach(e=>window.addEventListener(e,this.kick,{passive:true}));document.addEventListener("visibilitychange",this.kick);
+    if(this.clean()){const r=this.parsePath(location.pathname);this.setState({page:r.page,caseId:r.caseId||"block"});this.setTitle(r.page,r.caseId);
+      this.onPop=()=>{const r=this.parsePath(location.pathname);this.go(r.page,r.caseId||"block",true);};window.addEventListener("popstate",this.onPop);}
+    else try{const q=new URLSearchParams(location.search);if(q.get("page")){this.setState({page:q.get("page"),caseId:q.get("case")||"block"});}else{const s=JSON.parse(localStorage.getItem("zaya-site")||"{}");if(s.page&&s.page!=="About")this.setState({page:s.page,caseId:s.caseId||"quiet"});}}catch(e){}
     const f=tz=>new Date().toLocaleTimeString("en-GB",{hour:"2-digit",minute:"2-digit",timeZone:tz});
     const tick=()=>this.setState({lis:f("Europe/Lisbon"),lon:f("Europe/London"),noi:f("Asia/Kolkata")});tick();this.iv=setInterval(tick,30000);
     this.onR=()=>this.setState({w:window.innerWidth});this.onR();window.addEventListener("resize",this.onR);
   }
-  componentWillUnmount(){clearInterval(this.iv);window.removeEventListener("resize",this.onR);}
-  go(page,caseId){const id=caseId||this.state.caseId;this.setState({page,caseId:id,sent:false});try{localStorage.setItem("zaya-site",JSON.stringify({page,caseId:id}));}catch(e){}window.scrollTo(0,0);}
+  componentWillUnmount(){clearInterval(this.iv);if(this.onPop)window.removeEventListener("popstate",this.onPop);window.removeEventListener("resize",this.onR);}
+  clean(){return !/\.html?$/i.test(location.pathname)&&!/\.html?\//i.test(location.pathname);}
+  pathFor(page,id){const P={Home:"/",Work:"/work","Case studies":"/case-studies",Contact:"/contact"};if(page==="Case")return "/case-study/"+(SLUGS[id]||id);if(page==="Film")return "/work/"+(SLUGS[id]||id);return P[page]||"/";}
+  parsePath(path){const seg=path.replace(/\/+$/,"").split("/").filter(Boolean).map(decodeURIComponent);const unslug=s=>{const k=Object.keys(SLUGS).find(x=>SLUGS[x]===s.toLowerCase());return k||s;};
+    if(!seg.length)return {page:"Home"};const a=seg[0].toLowerCase();
+    if(a==="work")return seg[1]?{page:"Film",caseId:unslug(seg[1])}:{page:"Work"};
+    if(a==="case-studies"||a==="case-study")return seg[1]?{page:"Case",caseId:unslug(seg[1])}:{page:"Case studies"};
+    if(a==="contact")return {page:"Contact"};return {page:"Home"};}
+  setTitle(page,id){const p=PROJECTS.find(x=>x.id===id);const t=page==="Case"&&p?p.title+" · Case study":page==="Film"&&p?p.title:page==="Home"?"":page;document.title=(t?t+" · ":"")+"Zaya Productions";}
+  go(page,caseId,fromPop){const id=caseId||this.state.caseId;this.setState({page,caseId:id,sent:false,menu:false});
+    if(this.clean()){if(!fromPop){const path=this.pathFor(page,id);if(location.pathname!==path)history.pushState({page,caseId:id},"",path);}this.setTitle(page,id);}
+    else{try{localStorage.setItem("zaya-site",JSON.stringify({page,caseId:id}));}catch(e){}}
+    if(!fromPop)window.scrollTo(0,0);}
   link(fn){return e=>{if(e&&e.preventDefault)e.preventDefault();fn();};}
   decorate(p){const i=PROJECTS.indexOf(p);return {...p,num:pad(i+1),f1:p.frames[0],f2:p.frames[1],f3:p.frames[2],clientYear:p.client+" · "+p.year,
     surfaces:p.surfaces.map((s,k)=>({n:pad(k+1),name:s[0],line:s[1]})),credits:p.credits.map(c=>({role:c[0],by:c[1]})),
@@ -632,7 +712,7 @@ class Component extends DCLogic {
     const c=this.decorate(PROJECTS.find(p=>p.id===s.caseId)||PROJECTS[0]);
     const ci=PROJECTS.findIndex(p=>p.id===c.id);const next=this.decorate(PROJECTS[(ci+1)%PROJECTS.length]);
     const wtile=(p,i)=>{const vr=this.wrefs[p.id]||(this.wrefs[p.id]=React.createRef());const m=!!(s.wm||{})[p.id],playing=s.wp===p.id,hv=s.whov===p.id;
-        return {...this.decorate(p),num:pad(i+1),vref:vr,muted:m,muteText:m?"Sound off":"Sound on",muteLabel:m?"Unmute":"Mute",
+        return {...this.decorate(p),num:pad(i+1),vref:vr,vidScale:p.vidScale||1,muted:m,muteText:m?"Sound off":"Sound on",muteLabel:m?"Unmute":"Mute",
         tintStyle:{position:"absolute",inset:0,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center",background:"rgba(11,10,10,.45)",opacity:!playing&&hv&&!n?1:0,pointerEvents:playing?"none":"auto",transition:"opacity var(--dur-slow) var(--ease-out)"},
         enter:()=>this.setState({whov:p.id}),leave:()=>this.setState({whov:null}),ended:()=>this.setState({wp:null}),
         onPlay:()=>{if(this.state.wp!==p.id)this.setState({wp:p.id});},onPause:()=>{if(this.state.wp===p.id)this.setState({wp:null});},
@@ -647,7 +727,7 @@ class Component extends DCLogic {
     const goto=p=>()=>this.go(p);
     return {
       reelRef:this.reelRef||(this.reelRef=React.createRef()),
-      reelIcon:this.state.reelPlaying?"❚❚":"▶",
+      reelIcon:this.state.reelPlaying?"❚❚":"▶︎",
       reelLabel:this.state.reelPlaying?"Pause reel":"Play reel",
       reelEnded:()=>this.setState({reelPlaying:false}),
       reelEnter:()=>this.setState({reelHov:true}),reelLeave:()=>this.setState({reelHov:false}),
@@ -670,7 +750,7 @@ class Component extends DCLogic {
         vidStyle:{position:"absolute",inset:0,width:"100%",height:"100%",objectFit:"cover",display:"block",transform:hv?"scale(1.035)":"scale(1)",transition:"transform var(--dur-cinematic) "+ease},
         gradStyle:{position:"absolute",left:0,right:0,bottom:0,height:"60%",background:"linear-gradient(to top,rgba(11,10,10,.85),rgba(11,10,10,0))",opacity:hv?1:0,transform:hv?"none":"translateY(24px)",transition:"opacity var(--dur-slow) "+ease+",transform var(--dur-slow) "+ease,pointerEvents:"none"},
         ctaStyle:{position:"absolute",left:20,bottom:18,font:"500 12px/1.2 var(--font-sans)",letterSpacing:"var(--tracking-label)",textTransform:"uppercase",color:"var(--zaya-paper)",opacity:hv?1:0,transform:hv?"none":"translateY(8px)",transition:"opacity var(--dur-slow) "+ease+",transform var(--dur-slow) "+ease,pointerEvents:"none"}};}),
-      loopRef:this.loopRef||(this.loopRef=el=>{if(el){el.muted=true;el.defaultMuted=true;el.setAttribute("muted","");const p=el.play();if(p)p.catch(()=>{});}}),
+      loopRef:this.loopRef||(this.loopRef=el=>{if(el){(this.loops||(this.loops=new Set())).add(el);el.muted=true;el.defaultMuted=true;el.setAttribute("muted","");const p=el.play();if(p)p.catch(()=>{});}}),
       allWorkBtn:{paddingTop:"5px",paddingBottom:0},
       featGrid:{display:"grid",gridTemplateColumns:n?"minmax(0,1fr)":"minmax(0,11fr) minmax(0,10fr)",gap:n?"var(--space-7)":"calc(var(--grid-gap) + 56px)",alignItems:"center",marginTop:"var(--space-8)"},
       workPadB:n?"0px":"120px",
@@ -699,8 +779,9 @@ class Component extends DCLogic {
       workList:PROJECTS.filter(p=>p.video&&!p.vertical).map(wtile),
       workListV:PROJECTS.filter(p=>p.video&&p.vertical).map((p,i)=>wtile(p,i+PROJECTS.filter(q=>q.video&&!q.vertical).length)),
       workGridV:{display:"grid",gridTemplateColumns:n?"minmax(0,1fr)":"repeat(3,minmax(0,1fr))",gap:"var(--space-8) calc(var(--grid-gap) + 40px)",marginTop:"var(--space-9)"},
-      caseList:PROJECTS.filter(p=>p.id==="block").map((p,i)=>({...this.decorate(p),num:pad(i+1),coverStyle:{position:"relative",aspectRatio:p.id==="block"?"8 / 9":"16 / 9",overflow:"hidden",cursor:"pointer",background:"radial-gradient(50% 55% at 30% 72%,rgba(168,51,102,.3),transparent 70%),linear-gradient(200deg,#302a27,#0b0a0a 72%)"}})),
-      c,next,caseTotal:pad(PROJECTS.length),
+      caseList:CASE_IDS.map(id=>PROJECTS.find(p=>p.id===id)).map((p,i)=>({...this.decorate(p),num:pad(i+1),coverPos:p.coverPos||"top",coverScale:p.coverScale||1,coverStyle:{position:"relative",aspectRatio:"8 / 9",overflow:"hidden",cursor:"pointer",background:"radial-gradient(50% 55% at 30% 72%,rgba(168,51,102,.3),transparent 70%),linear-gradient(200deg,#302a27,#0b0a0a 72%)"}})),
+      c,next,caseTotal:pad(PROJECTS.length),caseNum:pad(Math.max(0,CASE_IDS.indexOf(c.id))+1),isBlock:c.id==="block",isAhankar:c.id==="ahankar",
+      ahReels:AH_REELS.map((r,i)=>({...wtile(r,i),vidScale:r.vidScale||1,sideA:i%2===0,sideB:i%2===1})),
       frameStyles:{a:{margin:0,gridColumn:n?"1 / -1":"1 / span 7"},b:{margin:0,gridColumn:n?"1 / -1":"9 / span 4",marginTop:n?0:160},c:{margin:0,gridColumn:n?"1 / -1":"2 / span 10"}},
       beliefs:[
         {n:"01",title:"Atmosphere first.",line:"Before a logo or a frame, we decide how it should feel. Everything else follows the feeling."},
