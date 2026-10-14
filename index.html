@@ -610,7 +610,7 @@ surfaces:[["Motion","Timing, easing, transitions and type behaviour, delivered a
 quote:"People said the film felt quiet. That was the whole brief.",quoteBy:"Founder, Aspora",
 credits:[["Creative direction","Zaya"],["Motion system","Zaya"],["3D & lighting","Zaya"],["Sound","with Field Notes Audio"]],
 frames:["Exhale curve · 2.4s","Unit 01, studio light","Interface transition, frame 48"]},
-{id:"quiet",loop:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20loop%20video%202.mp4",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20Hackathon%20for%20web.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/groww%20hackathon%20thumbnail.png",title:"Hackathon",client:"Groww",discipline:"Film",tags:["Identity","Film","Social","Direction"],scope:"Brand Strategy ·  Website · Social",year:"2026",aspect:"16 / 9",location:"India",runtime:"04:12",case:true,
+{id:"quiet",agency:"Krutus",loop:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20loop%20video%202.mp4",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20Hackathon%20for%20web.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/groww%20hackathon%20thumbnail.png",title:"Hackathon",client:"Groww",discipline:"Film",tags:["Identity","Film","Social","Direction"],scope:"Brand Strategy ·  Website · Social",year:"2026",aspect:"16 / 9",location:"India",runtime:"04:12",case:true,
 logline:"Repositioning global OOH as a discipline of strategy, culture, and visibility.",
 brief:"Groww had a beautiful perfume and a loud visual life, six agencies, six tones, a feed that looked borrowed. They asked for a campaign. We suggested they needed a world first.",
 ideaA:"Scent is what happens in the",ideaEm:"pauses",ideaB:", so we built everything around them.",
@@ -628,7 +628,7 @@ surfaces:[["Film","A 2:48 campaign film and four fifteen-second edits."],["Direc
 quote:"It felt like we had been out there with them.",quoteBy:"Head of brand, Atelier Mer",
 credits:[["Direction","Zaya"],["Cinematography","Zaya"],["Edit & grade","Zaya"],["Sound design","with Halden Sound"]],
 frames:["Dusk · 20:51","The crossing · 03:10","First light · 06:22"]},
-{id:"chambers",title:"GrowwEdge",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20Edge%20Video%201%20for%20web.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/thumbnail%20for%20growwedge.jpg",client:"Groww",discipline:"YouTube video",tags:["Motion","Identity","Direction"],scope:"Generative motion · Wayfinding · Installation",year:"2024",aspect:"16 / 9",location:"India",runtime:"Loop",case:true,
+{id:"chambers",agency:"Krutus",title:"GrowwEdge",video:"https://pub-3ec2cb760fb045a4bfc3e5a1d5c47d62.r2.dev/Groww%20Edge%20Video%201%20for%20web.mp4",image:"https://pub-483fd9abdb31400fae6f9d825641c886.r2.dev/thumbnail%20for%20growwedge.jpg",client:"Groww",discipline:"YouTube video",tags:["Motion","Identity","Direction"],scope:"Generative motion · Wayfinding · Installation",year:"2024",aspect:"16 / 9",location:"India",runtime:"Loop",case:true,
 logline:"Ambient motion for twelve rooms that never plays the same way twice.",
 brief:"Kōen wanted each of its rooms to feel like a place you had arrived at, not a room you had been assigned.",
 ideaA:"Every room keeps its own",ideaEm:"weather",ideaB:".",
@@ -704,7 +704,7 @@ class Component extends DCLogic {
     else{try{localStorage.setItem("zaya-site",JSON.stringify({page,caseId:id}));}catch(e){}}
     if(!fromPop)window.scrollTo(0,0);}
   link(fn){return e=>{if(e&&e.preventDefault)e.preventDefault();fn();};}
-  decorate(p){const i=PROJECTS.indexOf(p);return {...p,num:pad(i+1),f1:p.frames[0],f2:p.frames[1],f3:p.frames[2],clientYear:p.client+" · "+p.year,
+  decorate(p){const i=PROJECTS.indexOf(p);return {...p,client:p.agency?p.client+" · Agency: "+p.agency:p.client,num:pad(i+1),f1:p.frames[0],f2:p.frames[1],f3:p.frames[2],clientYear:p.client+" · "+p.year,
     surfaces:p.surfaces.map((s,k)=>({n:pad(k+1),name:s[0],line:s[1]})),credits:p.credits.map(c=>({role:c[0],by:c[1]})),
     card:{index:i+1,title:p.title,client:p.client,discipline:p.discipline,year:p.year,aspect:p.aspect,image:p.image},
     open:()=>this.go("Case",p.id),openLink:this.link(()=>this.go("Case",p.id))};}
